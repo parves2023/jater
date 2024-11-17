@@ -5,7 +5,7 @@ const About = () => {
     <div className="container mx-auto px-4 py-10">
       {/* About Section */}
       <section className="text-center mb-10">
-        <h2 className="text-3xl font-bold text-blue-600 mb-4">About Us</h2>
+        <h2 className="text-4xl font-bold  mb-4">About Us</h2>
         <p className="text-lg text-gray-700 mb-6">
           Welcome to <span className="font-semibold text-yellow-500">Lingo Bingo</span>, your go-to platform for mastering new vocabularies and enhancing your language skills! 🧠📚
         </p>
