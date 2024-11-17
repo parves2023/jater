@@ -1,39 +1,24 @@
 import { useLoaderData } from "react-router-dom";
-import Header from "../Shared/Header/Header";
-import LeftSideNav from "../Shared/LeftSideNav/LeftSideNav";
-import Navbar from "../Shared/Navbar/Navbar";
-import RightSideNav from "../Shared/RightSideNav/RightSideNav";
-import BreakingNews from "./BreakingNews";
-import NewsCard from "./NewsCard";
+import Slider from "../../components/Slider";
+import About from "../../components/About";
+import SuccessSection from "../../components/SuccessSection";
+import JoyfulMomentsSection from "../../components/JoyfulMomentsSection";
+import LearningAchievementsSection from "../../components/LearningAchievementsSection";
 
 
 const Home = () => {
-    const news = useLoaderData();
- 
-    return (
-        <div>
-            <Header></Header>
-            <BreakingNews></BreakingNews>
-            <Navbar></Navbar>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div>
-                    <LeftSideNav></LeftSideNav>
-                </div>
-                {/* news container */}
-                <div className="md:col-span-2">
-                    {
-                        news.map(aNews => <NewsCard
-                            key={aNews._id}
-                            news={aNews}
-                        ></NewsCard>)
-                    }
-                </div>
-                <div>
-                    <RightSideNav></RightSideNav>
-                </div>
-            </div>
-        </div>
-    );
+  const words = useLoaderData();
+
+  return (
+    <div className="my-10">
+      {/* {words.length} */}
+      <Slider></Slider>
+      <About></About>
+      <SuccessSection></SuccessSection>
+      <JoyfulMomentsSection></JoyfulMomentsSection>
+      <LearningAchievementsSection></LearningAchievementsSection>
+    </div>
+  );
 };
 
 export default Home;
