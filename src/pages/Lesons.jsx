@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { IoVolumeHighOutline } from "react-icons/io5";
+
+
 
 function Lessons() {
+
   const { id } = useParams(); // id is a string
   const [lesson, setLesson] = useState([]);
   const [modalData, setModalData] = useState(null); // State for modal data
@@ -27,6 +31,25 @@ function Lessons() {
 
     fetchLessons();
   }, [id]);
+
+const speakWord = (word, lang = "en-US") => {
+  
+
+
+  if ("speechSynthesis" in window) {
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = lang;
+    window.speechSynthesis.speak(utterance);
+    window.speechSynthesis.speak("hello");
+    console.log(utterance);
+    
+  } else {
+    alert("Sorry, your browser does not support text-to-speech!");
+  }
+};
+
+
+  
 
   if (!lesson.length) {
     return <p>Loading lesson {id}...</p>;
@@ -69,12 +92,15 @@ function Lessons() {
             <p className="text-sm text-gray-600">
               <strong>Part of Speech:</strong> {word.part_of_speech}
             </p>
-            <button
-              className="mt-4 btn btn-sm btn-primary"
+           <div className="flex justify-between items-center mt-4">
+           <button
+              className=" btn btn-sm btn-primary"
               onClick={() => openModal(word)}
             >
               When to Say
             </button>
+            <div   onClick={() => speakWord(word.meaning)} className="flex gap-2 ml-4 items-center cursor-pointer btn btn-sm"><IoVolumeHighOutline /> SpeakUp</div>
+           </div>
           </div>
         ))}
       </div>
