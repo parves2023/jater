@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD5t8s1dRyoEzuicQC5Gx1qUtopigFDrWY",
-  authDomain: "react-dragon-news-auth.firebaseapp.com",
-  projectId: "react-dragon-news-auth",
-  storageBucket: "react-dragon-news-auth.appspot.com",
-  messagingSenderId: "750044483429",
-  appId: "1:750044483429:web:77f4f5d3f33234b21f5b8c"
+  apiKey: "AIzaSyDhz5eNr7d6QInkadg_MaNvVPtO_qFrSh8",
+  authDomain: "lingo-bingo.firebaseapp.com",
+  projectId: "lingo-bingo",
+  storageBucket: "lingo-bingo.firebasestorage.app",
+  messagingSenderId: "952906610722",
+  appId: "1:952906610722:web:e1ef891488dc0ef40bb27b"
 };
 
 

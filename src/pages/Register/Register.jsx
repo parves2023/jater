@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Navbar from "../../components/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
@@ -17,14 +16,13 @@ const Register = () => {
     const password = form.get("password");
 
     // create user
-    createUser(email, password)
+    createUser(email, password,name,photo)
       .then((result) => {})
       .catch((error) => {});
   };
 
   return (
     <div>
-      <Navbar></Navbar>
       <div>
         <h2 className="text-3xl my-10 text-center">Please Register</h2>
         <form onSubmit={handleRegister} className=" md:w-3/4 lg:w-1/2 mx-auto">
