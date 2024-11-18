@@ -13,6 +13,7 @@ import UpdateProfile from "../pages/UpdateProfile";
 import Tutorial from "../components/Tutorial";
 import AboutUs from "../pages/Aboutus";
 import NotFound from "../components/NotFound";
+import ForgotPass from "../components/ForgotPass";
 
 
 const router = createBrowserRouter([
@@ -57,7 +58,10 @@ const router = createBrowserRouter([
            {
             path: '/tutorials',
            element: <PrivateRoute><Tutorial></Tutorial></PrivateRoute>
-           
+           },
+           {
+            path: '/forgotpass',
+            element: <ForgotPass></ForgotPass>
            }
             
         ]

@@ -12,6 +12,7 @@ const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [forgotEmail, setForgotEmail] = useState('');
 
 
     const createUser = (email, password) => {
@@ -19,9 +20,13 @@ const AuthProvider = ({ children }) => {
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
+    function ForgotPassword(email) {
+        console.log(email.current.value);
+        setForgotEmail(email.current.value);
+
+    }
+
     const signIn = (email, password) => {
-        console.log("sign in called");
-        
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
@@ -54,7 +59,9 @@ const AuthProvider = ({ children }) => {
         auth,
         createUser,
         signInGoogle,
+        ForgotPassword,
         signIn,
+        forgotEmail,
         logOut
     }
 

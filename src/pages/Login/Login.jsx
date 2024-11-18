@@ -5,7 +5,7 @@ import GoogleLoginButton from "../../components/GoogleLoginButton";
 import { sendPasswordResetEmail } from "firebase/auth";
 
 const Login = () => {
-  const { signIn, signInGoogle,auth } = useContext(AuthContext);
+  const { signIn, signInGoogle,auth,ForgotPassword } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const emailRef = useRef(); // Moved emailRef to the top-level
@@ -23,26 +23,15 @@ const Login = () => {
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
-        console.error("Login Error:", error.message);
+
       });
   };
-
-  function handleForgotPassword() {
-    const email = emailRef.current?.value; // Access email from the input field
-
-    if (!email) {
-      alert("Please enter your email address to reset your password.");
-      return;
-    }
-
-    sendPasswordResetEmail(auth, email)
-      .then(() => {
-        alert("Please check your email to reset your password.");
-      })
-      .catch((error) => {
-        console.error("Error sending password reset email:", error.message);
-      });
+  const handleForgotPassword = ()=>{
+    ForgotPassword(emailRef)
+    navigate('/forgotpass')
   }
+
+
 
   return (
     <div>

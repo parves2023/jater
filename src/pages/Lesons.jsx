@@ -12,18 +12,16 @@ function Lessons() {
         const response = await fetch("/words.json");
         const data = await response.json();
 
-        console.log("Fetched Data:", data);
-        console.log("ID from Params:", id);
 
         // Convert id to a number for comparison
         const selectedLesson = data.filter(
           (lesson) => lesson.lesson_no === Number(id)
         );
 
-        console.log("Selected Lesson:", selectedLesson);
+
         setLesson(selectedLesson);
       } catch (error) {
-        console.error("Error fetching lessons:", error.message);
+
       }
     };
 

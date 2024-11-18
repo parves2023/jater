@@ -12,7 +12,7 @@ const GoogleLoginButton = ({ signInGoogle }) => {
     
           }).catch((error) => {
             const errorMessage = error.message;
-            console.log(errorMessage);
+         
           });
     }
   return (

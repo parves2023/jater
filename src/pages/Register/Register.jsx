@@ -45,7 +45,7 @@ const Register = () => {
             position: "top-center",
             autoClose: 2000,
           });
-          console.error("Error updating profile:", error);
+
         });
     })
     .catch(() => {
