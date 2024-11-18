@@ -7,6 +7,10 @@ import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
 import PrivateRoute from "./PrivateRoute";
 import About from "../components/About";
+import { div, path } from "framer-motion/client";
+import MyProfile from "../components/MyProfile";
+import UpdateProfile from "../pages/UpdateProfile";
+import Tutorial from "../components/Tutorial";
 
 
 const router = createBrowserRouter([
@@ -38,7 +42,22 @@ const router = createBrowserRouter([
             {
                 path: '/about-us',
                 element: <About></About>
-            }
+            },
+           {
+            path: '/my-profile',
+            element: <PrivateRoute><MyProfile></MyProfile></PrivateRoute>
+           },
+           {
+            path: '/update-profile',
+           element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
+
+           },
+           {
+            path: '/tutorials',
+           element: <PrivateRoute><Tutorial></Tutorial></PrivateRoute>
+           
+           }
+            
         ]
     }    
 ]);

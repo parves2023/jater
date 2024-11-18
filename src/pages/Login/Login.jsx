@@ -1,11 +1,14 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import GoogleLoginButton from "../../components/GoogleLoginButton";
+import { sendPasswordResetEmail } from "firebase/auth";
 
 const Login = () => {
-  const { signIn } = useContext(AuthContext);
+  const { signIn, signInGoogle,auth } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
+  const emailRef = useRef(); // Moved emailRef to the top-level
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -20,15 +23,32 @@ const Login = () => {
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
-        // console.error(error);
+        console.error("Login Error:", error.message);
       });
   };
+
+  function handleForgotPassword() {
+    const email = emailRef.current?.value; // Access email from the input field
+
+    if (!email) {
+      alert("Please enter your email address to reset your password.");
+      return;
+    }
+
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        alert("Please check your email to reset your password.");
+      })
+      .catch((error) => {
+        console.error("Error sending password reset email:", error.message);
+      });
+  }
 
   return (
     <div>
       <div>
         <h2 className="text-3xl my-10 text-center">Please Login</h2>
-        <form onSubmit={handleLogin} className=" md:w-3/4 lg:w-1/2 mx-auto">
+        <form onSubmit={handleLogin} className="md:w-3/4 lg:w-1/2 mx-auto">
           <div className="form-control">
             <label className="label">
               <span className="label-text">Email</span>
@@ -37,6 +57,7 @@ const Login = () => {
               type="email"
               required
               name="email"
+              ref={emailRef} // Attach ref here
               placeholder="Email"
               className="input input-bordered"
             />
@@ -53,9 +74,14 @@ const Login = () => {
               className="input input-bordered"
             />
             <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
-                Forgot password?
-              </a>
+              <div>
+                <a
+                  onClick={handleForgotPassword} // Call forgot password handler
+                  className="label-text-alt link link-hover cursor-pointer"
+                >
+                  Forgot password?
+                </a>
+              </div>
             </label>
           </div>
           <div className="form-control mt-6">
@@ -68,6 +94,9 @@ const Login = () => {
             Register
           </Link>
         </p>
+        <div>
+          <GoogleLoginButton signInGoogle={signInGoogle}></GoogleLoginButton>
+        </div>
       </div>
     </div>
   );

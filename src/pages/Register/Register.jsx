@@ -1,31 +1,74 @@
-import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const { createUser,auth } = useContext(AuthContext);
+
+  const [passwordError, setPasswordError] = useState("");
 
   const handleRegister = (e) => {
     e.preventDefault();
 
     const form = new FormData(e.currentTarget);
-
     const name = form.get("name");
     const photo = form.get("photo");
     const email = form.get("email");
     const password = form.get("password");
 
-    // create user
-    createUser(email, password,name,photo)
-      .then((result) => {})
-      .catch((error) => {});
+    if (password.length < 6 || !/[A-Z]/.test(password) || !/[a-z]/.test(password)) {
+      setPasswordError("Password must be at least 6 characters long, must include at least one Uppercase and Lowercase");
+      return;
+    } else {
+      setPasswordError("");
+    }
+
+    // Create user
+    createUser(email, password, name, photo)
+    .then((result) => {
+      // Update the user's profile with the name and photo URL
+      updateProfile(auth.currentUser, {
+        displayName: name, photoURL: photo
+      }).then(() => {
+          toast.success("Registration successful!", {
+            position: "top-center",
+            autoClose: 2000,
+          });
+          setTimeout(() => navigate("/"), 2000); // Delay navigation to show toast
+        })
+        .catch((error) => {
+          toast.error("Failed to update profile", {
+            position: "top-center",
+            autoClose: 2000,
+          });
+          console.error("Error updating profile:", error);
+        });
+    })
+    .catch(() => {
+      toast.error("Something went wrong!", {
+        position: "top-center",
+        autoClose: 2000,
+      });
+    });
+
   };
 
   return (
     <div>
       <div>
         <h2 className="text-3xl my-10 text-center">Please Register</h2>
-        <form onSubmit={handleRegister} className=" md:w-3/4 lg:w-1/2 mx-auto">
+        <form onSubmit={handleRegister} className="md:w-3/4 lg:w-1/2 mx-auto relative">
+          <ToastContainer
+            position="top-center"
+            hideProgressBar
+            newestOnTop
+            closeOnClick
+            className="absolute"
+          />
           <div className="form-control">
             <label className="label">
               <span className="label-text">Name</span>
@@ -73,11 +116,9 @@ const Register = () => {
               placeholder="Password"
               className="input input-bordered"
             />
-            <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
-                Forgot password?
-              </a>
-            </label>
+            {passwordError && (
+              <p className="text-red-600 text-sm mt-2">{passwordError}</p>
+            )}
           </div>
           <div className="form-control mt-6">
             <button className="btn btn-primary">Register</button>

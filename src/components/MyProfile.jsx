@@ -1,0 +1,36 @@
+
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
+
+const MyProfile = () => {
+  const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  return (
+    <div className="container mx-auto p-6">
+      <h1 className="text-4xl font-bold text-center mb-6">
+        Welcome, {user?.displayName || "User"}!
+      </h1>
+      <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+        <div className="flex flex-col items-center">
+          <img
+            src={user?.photoURL || "https://via.placeholder.com/150"}
+            alt="Profile"
+            className="w-32 h-32 rounded-full mb-4"
+          />
+          <h2 className="text-2xl font-semibold">{user?.displayName}</h2>
+          <p className="text-gray-600">{user?.email}</p>
+        </div>
+        <button
+          onClick={() => navigate("/update-profile")}
+          className="mt-6 w-full btn btn-primary"
+        >
+          Update Profile
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default MyProfile;
