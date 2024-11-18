@@ -9,3 +9,8 @@ html {
     scroll-behavior: smooth;
   }
   
+
+  .animate__animated {
+    animation: bounce 2s infinite !important;
+  }
+  

@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+
 
 // Import images
 import banner1 from "../assets/banner1.webp";
@@ -26,6 +30,15 @@ const Slider = () => {
     },
   ];
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: true, 
+    });
+  }, []);
+
+
+
   return (
     <div className="w-full h-[400px] md:h-[500px] container">
       <Carousel
@@ -38,13 +51,24 @@ const Slider = () => {
         className="text-center"
       >
         {banners.map((banner, index) => (
-          <div key={index} className="relative h-full">
+          <div
+            key={index}
+            className="relative h-full"
+            data-aos="zoom-in"
+          >
             {/* Image with gray overlay */}
-            <img src={banner.image} alt={`Slide ${index + 1}`} className="h-[30rem] object-cover brightness-50 rounded-2xl" />
+            <img
+              src={banner.image}
+              alt={`Slide ${index + 1}`}
+              className="h-[30rem] object-cover brightness-50 rounded-2xl"
+            />
 
             {/* Centered text */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-white px-4 text-center">
-              <h2 className="text-4xl md:text-5xl font-bold">{banner.heading}</h2>
+            <div
+              className=" absolute inset-0 flex flex-col items-center justify-center text-white px-4 text-center"
+              data-aos="fade-up" // Additional animation for text
+            >
+              <h2 className="text-4xl animate__animated animate__bounce md:text-5xl font-bold">{banner.heading}</h2>
               <p className="mt-4 text-lg md:text-xl">{banner.text}</p>
             </div>
           </div>

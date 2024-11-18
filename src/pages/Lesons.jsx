@@ -32,21 +32,16 @@ function Lessons() {
     fetchLessons();
   }, [id]);
 
-const speakWord = (word, lang = "en-US") => {
+  const speakWord = (word, lang = "en-US") => {
+    if ("speechSynthesis" in window) {
+      const utterance = new SpeechSynthesisUtterance(word);
+      utterance.lang = lang; 
+      window.speechSynthesis.speak(utterance);
+    } else {
+      alert("Sorry, your browser does not support text-to-speech!");
+    }
+  };
   
-
-
-  if ("speechSynthesis" in window) {
-    const utterance = new SpeechSynthesisUtterance(word);
-    utterance.lang = lang;
-    window.speechSynthesis.speak(utterance);
-    window.speechSynthesis.speak("hello");
-    console.log(utterance);
-    
-  } else {
-    alert("Sorry, your browser does not support text-to-speech!");
-  }
-};
 
 
   

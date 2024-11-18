@@ -5,18 +5,35 @@ import SuccessSection from "../../components/SuccessSection";
 import JoyfulMomentsSection from "../../components/JoyfulMomentsSection";
 import LearningAchievementsSection from "../../components/LearningAchievementsSection";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Home = () => {
-  const words = useLoaderData();
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
 
   return (
     <div className="my-10">
-      {/* {words.length} */}
       <Slider></Slider>
       <About></About>
-      <SuccessSection></SuccessSection>
-      <JoyfulMomentsSection></JoyfulMomentsSection>
-      <LearningAchievementsSection></LearningAchievementsSection>
+      <div data-aos="zoom-out-left">
+        <SuccessSection></SuccessSection>
+      </div>
+      <div data-aos="zoom-out-right">
+        <JoyfulMomentsSection></JoyfulMomentsSection>
+      </div>
+      <div
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"
+      >
+        <LearningAchievementsSection></LearningAchievementsSection>
+      </div>
     </div>
   );
 };
