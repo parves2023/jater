@@ -11,6 +11,8 @@ import { div, path } from "framer-motion/client";
 import MyProfile from "../components/MyProfile";
 import UpdateProfile from "../pages/UpdateProfile";
 import Tutorial from "../components/Tutorial";
+import AboutUs from "../pages/Aboutus";
+import NotFound from "../components/NotFound";
 
 
 const router = createBrowserRouter([
@@ -41,7 +43,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/about-us',
-                element: <About></About>
+                element: <AboutUs></AboutUs>
             },
            {
             path: '/my-profile',
@@ -59,7 +61,11 @@ const router = createBrowserRouter([
            }
             
         ]
-    }    
+    },
+    {
+        path: "*",
+        element: <NotFound></NotFound>
+    }  
 ]);
 
 export default router;

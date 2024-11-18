@@ -17,9 +17,9 @@ const Tutorial = () => {
       <h2 className="text-4xl font-bold text-center mb-8">Tutorial Page</h2>
       <div className="flex flex-col gap-6">
         {videos.map((video, index) => (
-          <div key={index} className="w-full h-80">
+          <div key={index} className="w-full h-96">
             <iframe
-              className="w-full h-80 rounded-lg shadow-md"
+              className="w-full h-96 rounded-lg shadow-md"
               src={video.replace("youtu.be", "www.youtube.com/embed").split("?")[0]}
               title={`Tutorial Video ${index + 1}`}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

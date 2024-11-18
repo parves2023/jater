@@ -32,7 +32,7 @@ const UpdateProfile = () => {
           position: "top-right",
           autoClose: 2000,
         });
-        setTimeout(() => navigate("/my-profile"), 2000); // Navigate to profile page
+        setTimeout(() => navigate("/my-profile"), 2000); 
       })
       .catch((error) => {
         toast.error("Failed to update profile", {
@@ -45,7 +45,7 @@ const UpdateProfile = () => {
 
   return (
     <div className="container mx-auto px-4 py-10">
-      <ToastContainer /> {/* Add this to make toast notifications work */}
+      <ToastContainer />
       <h2 className="text-3xl font-bold text-center mb-6">Update Profile</h2>
       <form
         onSubmit={handleUpdateProfile}
