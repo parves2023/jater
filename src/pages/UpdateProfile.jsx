@@ -29,7 +29,7 @@ const UpdateProfile = () => {
     })
       .then(() => {
         toast.success("Profile updated successfully!", {
-          position: "top-center",
+          position: "top-right",
           autoClose: 2000,
         });
         setTimeout(() => navigate("/my-profile"), 2000); // Navigate to profile page
