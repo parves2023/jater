@@ -13,9 +13,9 @@ const LearningAchievementsSection = () => {
   ];
 
   return (
-    <section className="bg-blue-500 text-center p-16 my-10 rounded-2xl">
+    <section className="bg-gradient-to-r container mx-auto from-teal-400 to-gray-800 text-center p-16 my-10 rounded-2xl">
       {/* Heading */}
-      <h2 className="text-4xl font-bold text-white mb-8">🎓 Learning Achievements 🏅</h2>
+      <h2 className="text-4xl font-bold text-white mb-8">🎓 Learning <span className="text-green-400">Achievements</span> 🏅</h2>
 
       {/* Marquee Component with Text */}
       <Marquee gradient={false} speed={50} className="text-white font-semibold text-xl mb-8">
@@ -26,7 +26,7 @@ const LearningAchievementsSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {milestones.map((milestone, index) => (
           <div key={index} className="bg-white p-8 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-bold text-blue-600 mb-4">{milestone.title}</h3>
+            <h3 className="text-2xl font-bold text-teal-600 mb-4">{milestone.title}</h3>
             <p className="text-lg text-gray-800">{milestone.description}</p>
           </div>
         ))}

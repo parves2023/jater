@@ -1,15 +1,14 @@
 import React, { useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 
 
 
 // Import images
-import banner1 from "../assets/banner1.webp";
-import banner2 from "../assets/banner2.webp";
-import banner3 from "../assets/banner3.webp";
+import banner3 from "../assets/banner1.jpg";
+import banner2 from "../assets/banner2.jpg";
+import banner1 from "../assets/banner.jpg";
 
 const Slider = () => {
   const banners = [
@@ -30,17 +29,12 @@ const Slider = () => {
     },
   ];
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, 
-      once: true, 
-    });
-  }, []);
+
 
 
 
   return (
-    <div className="w-full h-[400px] md:h-[500px] container">
+    <div className="w-full h-[400px] md:h-[500px] container mx-auto">
       <Carousel
         showArrows
         autoPlay
@@ -54,7 +48,6 @@ const Slider = () => {
           <div
             key={index}
             className="relative h-full"
-            data-aos="zoom-in"
           >
             {/* Image with gray overlay */}
             <img
@@ -69,7 +62,10 @@ const Slider = () => {
               data-aos="fade-up" // Additional animation for text
             >
               <h2 className="text-4xl animate__animated animate__bounce md:text-5xl font-bold">{banner.heading}</h2>
+              <span className="text-green-300">
               <p className="mt-4 text-lg md:text-xl">{banner.text}</p>
+
+              </span>
             </div>
           </div>
         ))}

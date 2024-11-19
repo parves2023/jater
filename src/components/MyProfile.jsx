@@ -17,14 +17,14 @@ const MyProfile = () => {
           <img
             src={user?.photoURL || "https://via.placeholder.com/150"}
             alt="Profile"
-            className="w-32 h-32 rounded-full mb-4"
+            className="w-32 h-32 rounded-full mb-4 ring ring-green-300 text-center"
           />
           <h2 className="text-2xl font-semibold">{user?.displayName}</h2>
           <p className="text-gray-600">{user?.email}</p>
         </div>
         <button
           onClick={() => navigate("/update-profile")}
-          className="mt-6 w-full btn btn-primary"
+          className="btn w-full my-2 bg-white px-10 hover:bg-green-800 hover:text-white font-medium border border-green-500"
         >
           Update Profile
         </button>

@@ -34,9 +34,12 @@ const Login = () => {
 
 
   return (
-    <div>
+    <div className="my-5">
       <div>
-        <h2 className="text-3xl my-10 text-center">Please Login</h2>
+    
+        <h1 className="text-3xl mt-7 ralewayfont font-bold text-center mb-6">
+        Please <span className="text-[#309255]">Login</span>
+      </h1>
         <form onSubmit={handleLogin} className="md:w-3/4 lg:w-1/2 mx-auto">
           <div className="form-control">
             <label className="label">
@@ -74,7 +77,7 @@ const Login = () => {
             </label>
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary">Login</button>
+            <button className="btn bg-white px-10 hover:bg-green-800 hover:text-white font-medium border border-green-500">Login</button>
           </div>
         </form>
         <p className="text-center mt-4">

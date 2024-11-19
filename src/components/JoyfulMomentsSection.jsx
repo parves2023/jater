@@ -3,9 +3,12 @@ import { motion } from 'framer-motion';
 
 const JoyfulMomentsSection = () => {
   return (
-    <section className="bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 py-16 text-center">
-      <h2 className="text-4xl font-bold text-white mb-6 animate__animated animate__bounceIn">
-        🎉 Celebrate Your Learning Journey! 🎉
+    <section className="container mx-auto bg-gradient-to-r from-teal-500 to-green-800 py-16 text-center">
+      <h2 className="text-4xl text-gray-200 font-bold  mb-6 animate__animated animate__bounceIn">
+        🎉 Celebrate Your <span className="text-green-400">
+         Learning Journey! 🎉
+          
+        </span>
       </h2>
       <p className="text-lg text-white mb-12 animate__animated animate__fadeIn">
         Every step you take brings you closer to mastering a new skill! Let's make the most of this journey.
@@ -17,7 +20,7 @@ const JoyfulMomentsSection = () => {
           className="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
           whileHover={{ scale: 1.05 }}
         >
-          <h3 className="text-2xl font-bold text-pink-600 mb-4">100+</h3>
+          <h3 className="text-2xl font-bold text-green-600 mb-4">100+</h3>
           <p className="text-lg text-gray-800">Courses Completed</p>
         </motion.div>
 
@@ -25,7 +28,7 @@ const JoyfulMomentsSection = () => {
           className="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
           whileHover={{ scale: 1.05 }}
         >
-          <h3 className="text-2xl font-bold text-orange-600 mb-4">1,500+</h3>
+          <h3 className="text-2xl font-bold text-green-600 mb-4">1,500+</h3>
           <p className="text-lg text-gray-800">Vocabulary Learned</p>
         </motion.div>
 
@@ -33,7 +36,7 @@ const JoyfulMomentsSection = () => {
           className="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
           whileHover={{ scale: 1.05 }}
         >
-          <h3 className="text-2xl font-bold text-yellow-600 mb-4">50+</h3>
+          <h3 className="text-2xl font-bold text-green-600 mb-4">50+</h3>
           <p className="text-lg text-gray-800">Tutorials Available</p>
         </motion.div>
       </div>

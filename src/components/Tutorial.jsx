@@ -14,7 +14,10 @@ const Tutorial = () => {
 
   return (
     <div className="container mx-auto px-4 py-10">
-      <h2 className="text-4xl font-bold text-center mb-8">Tutorial Page</h2>
+    
+      <h1 className="text-3xl mt-7 ralewayfont font-bold text-center mb-6">
+      Tutorial <span className="text-[#309255]">Page</span>
+      </h1>
       <div className="flex flex-col gap-6">
         {videos.map((video, index) => (
           <div key={index} className="w-full h-96">
@@ -31,7 +34,7 @@ const Tutorial = () => {
       <div className="text-center mt-8">
         <button
           onClick={() => navigate("/start-learning")}
-          className="btn btn-primary"
+          className="btn bg-white px-10 hover:bg-green-800 hover:text-white font-medium border border-green-500"
         >
           Learn Vocabularies
         </button>

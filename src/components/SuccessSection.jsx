@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 const SuccessSection = () => {
   return (
     <div className="container mx-auto px-4 py-16 text-center">
-      <h2 className="text-3xl font-bold mb-6">Our Success So Far</h2>
+      <h1 className="text-3xl ralewayfont font-bold my-4">Our Success<span className="text-[#309255]">So Far</span></h1>
       <p className="text-lg text-gray-700 mb-12">
         We're proud of what we've achieved, and we're just getting started! Here are some key milestones we've reached.
       </p>

@@ -33,12 +33,16 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="container mx-auto">
+      <div className="h-5">
+
+      </div>
+      <div className="navbar bg-[#EEFBF3] p-4 rounded-2xl border border-green-300 ">
       <div className="navbar-start">
         <div className="dropdown">
-            <div className="text-2xl font-bold hidden md:flex">
-                <h1>Lingo Bingo</h1>
-            </div>
+            <Link to='/' className=" hidden md:flex">
+                <h1 className="text-3xl ralewayfont font-bold">Lingo<span className="text-[#309255]">Bingo</span></h1>
+            </Link>
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -69,15 +73,16 @@ const Navbar = () => {
       <div className="navbar-end">
      
         {user ? (
-          <button onClick={handleSignOut} className="btn">
+          <button onClick={handleSignOut}  className="btn bg-white px-10 hover:bg-green-800 hover:text-white font-medium border border-green-500">
             Sign Out
           </button>
         ) : (
           <Link to="/login">
-            <button className="btn">Login</button>
+            <button className="btn bg-white px-10 hover:bg-green-800 hover:text-white font-medium border border-green-500">Login</button>
           </Link>
         )}
       </div>
+    </div>
     </div>
   );
 };

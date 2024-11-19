@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
-import app from "../firebase/firebase.config";
+import app from "../firebase/firebase.init";
 import { GoogleAuthProvider } from "firebase/auth";
 
 const provider = new GoogleAuthProvider();
@@ -21,7 +21,7 @@ const AuthProvider = ({ children }) => {
     }
 
     function ForgotPassword(email) {
-        console.log(email.current.value);
+       
         setForgotEmail(email.current.value);
 
     }

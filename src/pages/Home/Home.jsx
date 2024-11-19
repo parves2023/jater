@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+
 import Slider from "../../components/Slider";
 import About from "../../components/About";
 import SuccessSection from "../../components/SuccessSection";
@@ -7,19 +7,24 @@ import LearningAchievementsSection from "../../components/LearningAchievementsSe
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 import { useEffect } from "react";
 
 const Home = () => {
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: true,
+      once: false,
+      
     });
   }, []);
 
   return (
     <div className="my-10">
-      <Slider></Slider>
+       <div data-aos="zoom-in">
+       <Slider></Slider>
+       </div>
       <About></About>
       <div data-aos="zoom-out-left">
         <SuccessSection></SuccessSection>

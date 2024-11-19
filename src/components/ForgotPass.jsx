@@ -41,7 +41,7 @@ const ForgotPass = () => {
           position: "top-center",
           autoClose: 2000,
         });
-        console.error("Error sending reset email:", error);
+      
       });
   };
 
@@ -68,7 +68,7 @@ const ForgotPass = () => {
           />
         </div>
         <div className="form-control mt-6">
-          <button type="submit" className="btn btn-primary w-full">
+          <button type="submit" className="btn bg-white px-10 hover:bg-green-800 hover:text-white font-medium border border-green-500">
             Reset Password
           </button>
         </div>

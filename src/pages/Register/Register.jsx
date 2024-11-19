@@ -58,9 +58,11 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <div className="my-7">
       <div>
-        <h2 className="text-3xl my-10 text-center">Please Register</h2>
+      <h1 className="text-3xl mt-7 ralewayfont font-bold text-center mb-6">
+        Please <span className="text-[#309255]">Register</span>
+      </h1>
         <form onSubmit={handleRegister} className="md:w-3/4 lg:w-1/2 mx-auto relative">
           <ToastContainer
             position="top-center"
@@ -121,7 +123,7 @@ const Register = () => {
             )}
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary">Register</button>
+            <button className="btn bg-white px-10 hover:bg-green-800 hover:text-white font-medium border border-green-500">Register</button>
           </div>
         </form>
         <p className="text-center mt-4">

@@ -101,7 +101,7 @@ function Lessons() {
       </div>
 
       <div className="flex justify-center">
-        <Link  to={"/start-learning"} className="btn btn-primary my-8">GO to Lessons</Link>
+        <Link  to={"/start-learning"} className="btn bg-white px-10 hover:bg-green-800 hover:text-white font-medium border border-green-500">GO to Lessons</Link>
       </div>
 
       {/* Modal */}
