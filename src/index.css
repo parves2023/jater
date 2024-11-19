@@ -26,6 +26,11 @@ body{
 .montsefont{
   font-family: "Montserrat", sans-serif;
 }
+.scroll-to-top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
   
 
   .animate__animated {
