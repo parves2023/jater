@@ -18,7 +18,7 @@ const About = () => {
       {/* About Section */}
       <section className="text-center mb-10">
        
-        <h1 data-aos="zoom-in" className="text-4xl mb-3 ralewayfont font-bold">About <span className="text-[#309255]">Us</span></h1>
+        <h1 data-aos="zoom-in" className="text-4xl my-6 mt-20 md:mt-6 ralewayfont font-bold">About <span className="text-[#309255]">Us</span></h1>
         <p className="text-lg text-gray-700 mb-6">
           Welcome to <span className="font-semibold text-green-600">Lingo Bingo</span>, your go-to platform for mastering new vocabularies and enhancing your language skills! 🧠📚
         </p>
