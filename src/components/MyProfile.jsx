@@ -24,7 +24,7 @@ const MyProfile = () => {
         </div>
         <button
           onClick={() => navigate("/update-profile")}
-          className="btn w-full my-2 bg-white px-10 hover:bg-green-800 hover:text-white font-medium border border-green-500"
+          className="btn w-full my-2 bg-green-50 px-10 hover:bg-green-800 hover:text-white font-medium border border-green-500"
         >
           Update Profile
         </button>

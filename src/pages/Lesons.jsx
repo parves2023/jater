@@ -89,19 +89,19 @@ function Lessons() {
             </p>
            <div className="flex justify-between items-center mt-4">
            <button
-              className=" btn btn-sm btn-primary"
+              className=" btn btn-sm bg-green-800 text-white px-6 hover:bg-white  hover:text-gray-900 font-medium border border-green-500 hover:border-gray-400 "
               onClick={() => openModal(word)}
             >
               When to Say
             </button>
-            <div   onClick={() => speakWord(word.meaning)} className="flex gap-2 ml-4 items-center cursor-pointer btn btn-sm"><IoVolumeHighOutline /> SpeakUp</div>
+            <div   onClick={() => speakWord(word.meaning)} className="flex gap-2 ml-4 items-center cursor-pointer btn btn-sm bg-white px-6 hover:bg-green-800 hover:text-white font-medium border border-green-500"><IoVolumeHighOutline /> SpeakUp</div>
            </div>
           </div>
         ))}
       </div>
 
-      <div className="flex justify-center">
-        <Link  to={"/start-learning"} className="btn bg-white px-10 hover:bg-green-800 hover:text-white font-medium border border-green-500">GO to Lessons</Link>
+      <div className="flex justify-center mt-10">
+        <Link  to={"/start-learning"} className="btn bg-green-50 px-10 hover:bg-green-800 hover:text-white font-medium border border-green-500">GO to Lessons</Link>
       </div>
 
       {/* Modal */}

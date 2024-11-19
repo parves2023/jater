@@ -83,7 +83,7 @@ const LetLearnPage = () => {
       <div className="text-center">
         <Link
           to="/tutorials"
-          className="btn bg-white px-10 hover:bg-green-800 hover:text-white font-medium border border-green-500"
+          className="btn bg-green-50 px-10 hover:bg-green-800 hover:text-white font-medium border border-green-500"
         >
           View More Tutorials
         </Link>

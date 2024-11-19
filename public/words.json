@@ -440,6 +440,757 @@
                 "lesson_no": 7,
                 "when_to_say": "When referring to comprehension or insight",
                 "example": "समझ के बिना काम करना मुश्किल है। (Samajh ke bina kaam karna mushkil hai.)"
-              }
+              },
+
+
+              
+                {
+                  "id": "41",
+                  "word": "ज्ञान",
+                  "pronunciation": "gyaan",
+                  "meaning": "knowledge",
+                  "part_of_speech": "noun",
+                  "difficulty": "medium",
+                  "lesson_no": 8,
+                  "when_to_say": "When talking about information or wisdom",
+                  "example": "ज्ञान सबसे बड़ी संपत्ति है। (Gyaan sabse badi sampatti hai.)"
+                },
+                {
+                  "id": "42",
+                  "word": "साहस",
+                  "pronunciation": "sahas",
+                  "meaning": "courage",
+                  "part_of_speech": "noun",
+                  "difficulty": "medium",
+                  "lesson_no": 8,
+                  "when_to_say": "When describing bravery or boldness",
+                  "example": "साहस से सभी बाधाएं दूर होती हैं। (Sahas se sabhi baadhaen door hoti hain.)"
+                },
+                {
+                  "id": "43",
+                  "word": "प्रयास",
+                  "pronunciation": "prayas",
+                  "meaning": "effort",
+                  "part_of_speech": "noun",
+                  "difficulty": "medium",
+                  "lesson_no": 9,
+                  "when_to_say": "When referring to attempts or trials",
+                  "example": "प्रयास करना सफलता की कुंजी है। (Prayas karna safalta ki kunji hai.)"
+                },
+                {
+                  "id": "44",
+                  "word": "शक्ति",
+                  "pronunciation": "shakti",
+                  "meaning": "power",
+                  "part_of_speech": "noun",
+                  "difficulty": "easy",
+                  "lesson_no": 9,
+                  "when_to_say": "When discussing strength or energy",
+                  "example": "एकता में शक्ति होती है। (Ekta mein shakti hoti hai.)"
+                },
+                {
+                  "id": "45",
+                  "word": "संदेश",
+                  "pronunciation": "sandesh",
+                  "meaning": "message",
+                  "part_of_speech": "noun",
+                  "difficulty": "easy",
+                  "lesson_no": 10,
+                  "when_to_say": "When conveying information or news",
+                  "example": "मुझे एक महत्वपूर्ण संदेश मिला। (Mujhe ek mahatvapoorna sandesh mila.)"
+                },
+                {
+                  "id": "46",
+                  "word": "शांति",
+                  "pronunciation": "shaanti",
+                  "meaning": "peace",
+                  "part_of_speech": "noun",
+                  "difficulty": "easy",
+                  "lesson_no": 10,
+                  "when_to_say": "When referring to calmness or harmony",
+                  "example": "शांति से जीवन बेहतर बनता है। (Shaanti se jeevan behtar banta hai.)"
+                },
+                {
+                  "id": "47",
+                  "word": "संबंध",
+                  "pronunciation": "sambandh",
+                  "meaning": "relation",
+                  "part_of_speech": "noun",
+                  "difficulty": "medium",
+                  "lesson_no": 1,
+                  "when_to_say": "When discussing relationships or connections",
+                  "example": "परिवार में संबंध महत्वपूर्ण होते हैं। (Parivaar mein sambandh mahatvapoorna hote hain.)"
+                },
+                {
+                  "id": "48",
+                  "word": "संस्कृति",
+                  "pronunciation": "sanskriti",
+                  "meaning": "culture",
+                  "part_of_speech": "noun",
+                  "difficulty": "difficult",
+                  "lesson_no": 1,
+                  "when_to_say": "When referring to traditions or heritage",
+                  "example": "संस्कृति हमारी पहचान है। (Sanskriti hamaari pehchaan hai.)"
+                },
+                {
+                  "id": "49",
+                  "word": "अवसर",
+                  "pronunciation": "avasar",
+                  "meaning": "opportunity",
+                  "part_of_speech": "noun",
+                  "difficulty": "medium",
+                  "lesson_no": 2,
+                  "when_to_say": "When talking about chances or possibilities",
+                  "example": "अवसर का लाभ उठाना चाहिए। (Avasar ka laabh uthana chahiye.)"
+                },
+                {
+                  "id": "50",
+                  "word": "प्रेरणा",
+                  "pronunciation": "prerna",
+                  "meaning": "inspiration",
+                  "part_of_speech": "noun",
+                  "difficulty": "medium",
+                  "lesson_no": 2,
+                  "when_to_say": "When discussing motivation or influence",
+                  "example": "उनकी कहानी हमें प्रेरणा देती है। (Unki kahani humein prerna deti hai.)"
+                },
+                {
+                  "id": "51",
+                  "word": "सपना",
+                  "pronunciation": "sapna",
+                  "meaning": "dream",
+                  "part_of_speech": "noun",
+                  "difficulty": "easy",
+                  "lesson_no": 3,
+                  "when_to_say": "When referring to aspirations or visions",
+                  "example": "सपना देखना कोई बुरी बात नहीं। (Sapna dekhna koi buri baat nahi.)"
+                },
+                {
+                  "id": "52",
+                  "word": "संगीत",
+                  "pronunciation": "sangeet",
+                  "meaning": "music",
+                  "part_of_speech": "noun",
+                  "difficulty": "easy",
+                  "lesson_no": 3,
+                  "when_to_say": "When talking about melody or rhythm",
+                  "example": "संगीत जीवन में रंग भरता है। (Sangeet jeevan mein rang bharta hai.)"
+                },
+                {
+                  "id": "53",
+                  "word": "कला",
+                  "pronunciation": "kala",
+                  "meaning": "art",
+                  "part_of_speech": "noun",
+                  "difficulty": "medium",
+                  "lesson_no": 4,
+                  "when_to_say": "When discussing creativity or skill",
+                  "example": "कला व्यक्तित्व का हिस्सा होती है। (Kala vyaktitva ka hissa hoti hai.)"
+                },
+                {
+                  "id": "54",
+                  "word": "प्रकृति",
+                  "pronunciation": "prakriti",
+                  "meaning": "nature",
+                  "part_of_speech": "noun",
+                  "difficulty": "medium",
+                  "lesson_no": 4,
+                  "when_to_say": "When referring to the environment or natural world",
+                  "example": "प्रकृति की सुरक्षा हमारा कर्तव्य है। (Prakriti ki suraksha hamara kartavya hai.)"
+                },
+                {
+                  "id": "55",
+                  "word": "सामर्थ्य",
+                  "pronunciation": "samarthya",
+                  "meaning": "capability",
+                  "part_of_speech": "noun",
+                  "difficulty": "difficult",
+                  "lesson_no": 5,
+                  "when_to_say": "When discussing potential or strength",
+                  "example": "सामर्थ्य को पहचानना चाहिए। (Samarthya ko pehchanna chahiye.)"
+                },
+                {
+                  "id": "56",
+                  "word": "न्याय",
+                  "pronunciation": "nyay",
+                  "meaning": "justice",
+                  "part_of_speech": "noun",
+                  "difficulty": "medium",
+                  "lesson_no": 5,
+                  "when_to_say": "When referring to fairness or equity",
+                  "example": "न्याय का पालन करना जरूरी है। (Nyay ka paalan karna zaroori hai.)"
+                },
+                {
+                  "id": "57",
+                  "word": "विश्वास",
+                  "pronunciation": "vishwas",
+                  "meaning": "faith",
+                  "part_of_speech": "noun",
+                  "difficulty": "medium",
+                  "lesson_no": 6,
+                  "when_to_say": "When referring to trust or belief",
+                  "example": "विश्वास जीवन का आधार है। (Vishwas jeevan ka adhaar hai.)"
+                },
+                {
+                  "id": "58",
+                  "word": "समर्पण",
+                  "pronunciation": "samarpan",
+                  "meaning": "dedication",
+                  "part_of_speech": "noun",
+                  "difficulty": "difficult",
+                  "lesson_no": 6,
+                  "when_to_say": "When discussing commitment or devotion",
+                  "example": "समर्पण से ही सफलता मिलती है। (Samarpan se hi safalta milti hai.)"
+                },
+                {
+                  "id": "59",
+                  "word": "जीवन",
+                  "pronunciation": "jeevan",
+                  "meaning": "life",
+                  "part_of_speech": "noun",
+                  "difficulty": "easy",
+                  "lesson_no": 7,
+                  "when_to_say": "When talking about existence or being",
+                  "example": "जीवन अनमोल है। (Jeevan anmol hai.)"
+                },
+                {
+                  "id": "60",
+                  "word": "संवेदना",
+                  "pronunciation": "samvedana",
+                  "meaning": "empathy",
+                  "part_of_speech": "noun",
+                  "difficulty": "difficult",
+                  "lesson_no": 7,
+                  "when_to_say": "When discussing feelings or compassion",
+                  "example": "संवेदना से रिश्ते मजबूत होते हैं। (Samvedana se rishte majboot hote hain.)"
+                },
+
+
+
+
+                
+                  {
+                    "id": "61",
+                    "word": "उत्साह",
+                    "pronunciation": "utsah",
+                    "meaning": "enthusiasm",
+                    "part_of_speech": "noun",
+                    "difficulty": "medium",
+                    "lesson_no": 8,
+                    "when_to_say": "When referring to energy or excitement",
+                    "example": "उसके उत्साह ने सबको प्रेरित किया। (Uske utsah ne sabko prerit kiya.)"
+                  },
+                  {
+                    "id": "62",
+                    "word": "आशा",
+                    "pronunciation": "asha",
+                    "meaning": "hope",
+                    "part_of_speech": "noun",
+                    "difficulty": "easy",
+                    "lesson_no": 8,
+                    "when_to_say": "When talking about expectations or optimism",
+                    "example": "आशा से जीवन चलता है। (Asha se jeevan chalta hai.)"
+                  },
+                  {
+                    "id": "63",
+                    "word": "विश्वासनीय",
+                    "pronunciation": "vishwasniya",
+                    "meaning": "trustworthy",
+                    "part_of_speech": "adjective",
+                    "difficulty": "difficult",
+                    "lesson_no": 9,
+                    "when_to_say": "When describing reliability or credibility",
+                    "example": "सच्चे मित्र हमेशा विश्वासनीय होते हैं। (Sachche mitra hamesha vishwasniya hote hain.)"
+                  },
+                  {
+                    "id": "64",
+                    "word": "दया",
+                    "pronunciation": "daya",
+                    "meaning": "compassion",
+                    "part_of_speech": "noun",
+                    "difficulty": "easy",
+                    "lesson_no": 9,
+                    "when_to_say": "When discussing kindness or mercy",
+                    "example": "दया करना एक महान गुण है। (Daya karna ek mahaan gun hai.)"
+                  },
+                  {
+                    "id": "65",
+                    "word": "निर्णय",
+                    "pronunciation": "nirnay",
+                    "meaning": "decision",
+                    "part_of_speech": "noun",
+                    "difficulty": "medium",
+                    "lesson_no": 2,
+                    "when_to_say": "When referring to choices or conclusions",
+                    "example": "निर्णय सोच-समझकर लेना चाहिए। (Nirnay soch-samajhkar lena chahiye.)"
+                  },
+                  {
+                    "id": "66",
+                    "word": "आदर",
+                    "pronunciation": "adar",
+                    "meaning": "respect",
+                    "part_of_speech": "noun",
+                    "difficulty": "medium",
+                    "lesson_no": 2,
+                    "when_to_say": "When discussing honor or reverence",
+                    "example": "बड़ों का आदर करना चाहिए। (Bado ka adar karna chahiye.)"
+                  },
+                  {
+                    "id": "67",
+                    "word": "धैर्य",
+                    "pronunciation": "dhairya",
+                    "meaning": "patience",
+                    "part_of_speech": "noun",
+                    "difficulty": "medium",
+                    "lesson_no": 1,
+                    "when_to_say": "When talking about perseverance or tolerance",
+                    "example": "धैर्य हर मुश्किल को आसान बनाता है। (Dhairya har mushkil ko aasan banata hai.)"
+                  },
+                  {
+                    "id": "68",
+                    "word": "चुनौती",
+                    "pronunciation": "chunauti",
+                    "meaning": "challenge",
+                    "part_of_speech": "noun",
+                    "difficulty": "medium",
+                    "lesson_no": 1,
+                    "when_to_say": "When referring to tasks or obstacles",
+                    "example": "हर चुनौती एक अवसर है। (Har chunauti ek avasar hai.)"
+                  },
+                  {
+                    "id": "69",
+                    "word": "ईमानदारी",
+                    "pronunciation": "imandari",
+                    "meaning": "honesty",
+                    "part_of_speech": "noun",
+                    "difficulty": "medium",
+                    "lesson_no": 2,
+                    "when_to_say": "When referring to truthfulness or integrity",
+                    "example": "ईमानदारी से काम करने वाले को सब पसंद करते हैं। (Imandari se kaam karne wale ko sab pasand karte hain.)"
+                  },
+                  {
+                    "id": "70",
+                    "word": "उपलब्धि",
+                    "pronunciation": "uplabdhi",
+                    "meaning": "achievement",
+                    "part_of_speech": "noun",
+                    "difficulty": "medium",
+                    "lesson_no": 2,
+                    "when_to_say": "When discussing accomplishments",
+                    "example": "उसने बड़ी उपलब्धि हासिल की। (Usne badi uplabdhi hasil ki.)"
+                  },
+                  {
+                    "id": "71",
+                    "word": "असफलता",
+                    "pronunciation": "asafalta",
+                    "meaning": "failure",
+                    "part_of_speech": "noun",
+                    "difficulty": "medium",
+                    "lesson_no": 3,
+                    "when_to_say": "When referring to unsuccessful attempts",
+                    "example": "असफलता भी सफलता का हिस्सा है। (Asafalta bhi safalta ka hissa hai.)"
+                  },
+                  {
+                    "id": "72",
+                    "word": "योग्यता",
+                    "pronunciation": "yogyata",
+                    "meaning": "ability",
+                    "part_of_speech": "noun",
+                    "difficulty": "medium",
+                    "lesson_no": 3,
+                    "when_to_say": "When describing someone's skill or capability",
+                    "example": "उसकी योग्यता पर सबको गर्व है। (Uski yogyata par sabko garv hai.)"
+                  },
+                  {
+                    "id": "73",
+                    "word": "प्रसन्नता",
+                    "pronunciation": "prasannata",
+                    "meaning": "happiness",
+                    "part_of_speech": "noun",
+                    "difficulty": "easy",
+                    "lesson_no": 4,
+                    "when_to_say": "When referring to joy or contentment",
+                    "example": "प्रसन्नता से जीवन सरल हो जाता है। (Prasannata se jeevan saral ho jata hai.)"
+                  },
+                  {
+                    "id": "74",
+                    "word": "कठिनाई",
+                    "pronunciation": "kathinai",
+                    "meaning": "difficulty",
+                    "part_of_speech": "noun",
+                    "difficulty": "medium",
+                    "lesson_no": 4,
+                    "when_to_say": "When referring to challenges or troubles",
+                    "example": "कठिनाई का सामना साहस से करना चाहिए। (Kathinai ka samna sahas se karna chahiye.)"
+                  },
+                  {
+                    "id": "75",
+                    "word": "दृष्टि",
+                    "pronunciation": "drishti",
+                    "meaning": "vision",
+                    "part_of_speech": "noun",
+                    "difficulty": "medium",
+                    "lesson_no": 5,
+                    "when_to_say": "When referring to perspective or outlook",
+                    "example": "उसकी दृष्टि बहुत व्यापक है। (Uski drishti bahut vyapak hai.)"
+                  },
+                  {
+                    "id": "76",
+                    "word": "परिणाम",
+                    "pronunciation": "parinaam",
+                    "meaning": "result",
+                    "part_of_speech": "noun",
+                    "difficulty": "medium",
+                    "lesson_no": 5,
+                    "when_to_say": "When discussing outcomes or consequences",
+                    "example": "परिणाम मेहनत पर निर्भर करता है। (Parinaam mehnat par nirbhar karta hai.)"
+                  },
+                  {
+                    "id": "77",
+                    "word": "आवश्यकता",
+                    "pronunciation": "aavashyakta",
+                    "meaning": "necessity",
+                    "part_of_speech": "noun",
+                    "difficulty": "medium",
+                    "lesson_no": 6,
+                    "when_to_say": "When discussing needs or requirements",
+                    "example": "पानी जीवन की आवश्यकता है। (Pani jeevan ki aavashyakta hai.)"
+                  },
+                  {
+                    "id": "78",
+                    "word": "संघर्ष",
+                    "pronunciation": "sangharsh",
+                    "meaning": "struggle",
+                    "part_of_speech": "noun",
+                    "difficulty": "medium",
+                    "lesson_no": 6,
+                    "when_to_say": "When talking about hardships or conflicts",
+                    "example": "संघर्ष से इंसान मजबूत बनता है। (Sangharsh se insaan majboot banta hai.)"
+                  },
+                  {
+                    "id": "79",
+                    "word": "अनुभव",
+                    "pronunciation": "anubhav",
+                    "meaning": "experience",
+                    "part_of_speech": "noun",
+                    "difficulty": "medium",
+                    "lesson_no": 7,
+                    "when_to_say": "When referring to learning or knowledge gained",
+                    "example": "अनुभव से ज्ञान बढ़ता है। (Anubhav se gyaan badhta hai.)"
+                  },
+                  {
+                    "id": "80",
+                    "word": "कर्तव्य",
+                    "pronunciation": "kartavya",
+                    "meaning": "duty",
+                    "part_of_speech": "noun",
+                    "difficulty": "medium",
+                    "lesson_no": 7,
+                    "when_to_say": "When discussing responsibilities or obligations",
+                    "example": "हर नागरिक का कर्तव्य है कि वह नियम माने। (Har nagrik ka kartavya hai ki vah niyam mane.)"
+                  },
+                  {
+                    "id": "81",
+                    "word": "संतोष",
+                    "pronunciation": "santosh",
+                    "meaning": "contentment",
+                    "part_of_speech": "noun",
+                    "difficulty": "medium",
+                    "lesson_no": 8,
+                    "when_to_say": "When referring to satisfaction or happiness",
+                    "example": "संतोष से मन शांत रहता है। (Santosh se man shaant rehta hai.)"
+                  },
+                  {
+                    "id": "82",
+                    "word": "व्यवस्था",
+                    "pronunciation": "vyavastha",
+                    "meaning": "arrangement",
+                    "part_of_speech": "noun",
+                    "difficulty": "medium",
+                    "lesson_no": 8,
+                    "when_to_say": "When referring to organization or order",
+                    "example": "कार्यक्रम की व्यवस्था अच्छी थी। (Karyakram ki vyavastha achhi thi.)"
+                  },
+                  {
+                    "id": "83",
+                    "word": "उपहार",
+                    "pronunciation": "uphaar",
+                    "meaning": "gift",
+                    "part_of_speech": "noun",
+                    "difficulty": "easy",
+                    "lesson_no": 9,
+                    "when_to_say": "When referring to presents or offerings",
+                    "example": "उसने जन्मदिन पर सुंदर उपहार दिया। (Usne janmdin par sundar uphaar diya.)"
+                  },
+                  {
+                    "id": "84",
+                    "word": "निडर",
+                    "pronunciation": "nidar",
+                    "meaning": "fearless",
+                    "part_of_speech": "adjective",
+                    "difficulty": "medium",
+                    "lesson_no": 9,
+                    "when_to_say": "When describing someone brave or bold",
+                    "example": "निडर इंसान ही बड़ा काम करता है। (Nidar insaan hi bada kaam karta hai.)"
+                  },
+                  {
+                    "id": "85",
+                    "word": "सौंदर्य",
+                    "pronunciation": "saundarya",
+                    "meaning": "beauty",
+                    "part_of_speech": "noun",
+                    "difficulty": "medium",
+                    "lesson_no": 3,
+                    "when_to_say": "When referring to aesthetics or charm",
+                    "example": "प्रकृति का सौंदर्य अद्भुत है। (Prakriti ka saundarya adbhut hai.)"
+                  },
+                  {
+                    "id": "86",
+                    "word": "साहसी",
+                    "pronunciation": "sahasi",
+                    "meaning": "brave",
+                    "part_of_speech": "adjective",
+                    "difficulty": "medium",
+                    "lesson_no": 3,
+                    "when_to_say": "When describing someone courageous",
+                    "example": "साहसी लोग कभी हार नहीं मानते। (Sahasi log kabhi haar nahi maante.)"
+                  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+                    {
+                      "id": "87",
+                      "word": "स्वाभिमान",
+                      "pronunciation": "swabhimaan",
+                      "meaning": "self-respect",
+                      "part_of_speech": "noun",
+                      "difficulty": "medium",
+                      "lesson_no": 1,
+                      "when_to_say": "When discussing dignity or pride",
+                      "example": "स्वाभिमान से व्यक्ति का चरित्र निखरता है। (Swabhimaan se vyakti ka charitra nikharta hai.)"
+                    },
+                    {
+                      "id": "88",
+                      "word": "प्रेरणा",
+                      "pronunciation": "prerna",
+                      "meaning": "inspiration",
+                      "part_of_speech": "noun",
+                      "difficulty": "medium",
+                      "lesson_no": 1,
+                      "when_to_say": "When referring to motivation or encouragement",
+                      "example": "उनकी सफलता से हमें प्रेरणा मिली। (Unki safalta se humein prerna mili.)"
+                    },
+                    {
+                      "id": "89",
+                      "word": "मूल्य",
+                      "pronunciation": "moolya",
+                      "meaning": "value",
+                      "part_of_speech": "noun",
+                      "difficulty": "medium",
+                      "lesson_no": 2,
+                      "when_to_say": "When discussing importance or worth",
+                      "example": "जीवन का मूल्य समझना चाहिए। (Jeevan ka moolya samajhna chahiye.)"
+                    },
+                    {
+                      "id": "90",
+                      "word": "विनम्रता",
+                      "pronunciation": "vinamrata",
+                      "meaning": "humility",
+                      "part_of_speech": "noun",
+                      "difficulty": "medium",
+                      "lesson_no": 2,
+                      "when_to_say": "When discussing modesty or politeness",
+                      "example": "विनम्रता से सभी प्रभावित होते हैं। (Vinamrata se sabhi prabhavit hote hain.)"
+                    },
+                    {
+                      "id": "91",
+                      "word": "संतुलन",
+                      "pronunciation": "santulan",
+                      "meaning": "balance",
+                      "part_of_speech": "noun",
+                      "difficulty": "medium",
+                      "lesson_no": 3,
+                      "when_to_say": "When referring to equilibrium or stability",
+                      "example": "जीवन में संतुलन जरूरी है। (Jeevan mein santulan zaroori hai.)"
+                    },
+                    {
+                      "id": "92",
+                      "word": "उत्कृष्ट",
+                      "pronunciation": "utkrisht",
+                      "meaning": "excellent",
+                      "part_of_speech": "adjective",
+                      "difficulty": "medium",
+                      "lesson_no": 3,
+                      "when_to_say": "When describing something outstanding or superior",
+                      "example": "उसकी प्रस्तुति उत्कृष्ट थी। (Uski prastuti utkrisht thi.)"
+                    },
+                    {
+                      "id": "93",
+                      "word": "साहसिकता",
+                      "pronunciation": "sahasikta",
+                      "meaning": "adventurousness",
+                      "part_of_speech": "noun",
+                      "difficulty": "medium",
+                      "lesson_no": 4,
+                      "when_to_say": "When discussing bold or daring actions",
+                      "example": "साहसिकता से नए अनुभव मिलते हैं। (Sahasikta se naye anubhav milte hain.)"
+                    },
+                    {
+                      "id": "94",
+                      "word": "चिंतन",
+                      "pronunciation": "chintan",
+                      "meaning": "contemplation",
+                      "part_of_speech": "noun",
+                      "difficulty": "difficult",
+                      "lesson_no": 4,
+                      "when_to_say": "When referring to deep thinking or reflection",
+                      "example": "चिंतन से सही निर्णय लिया जा सकता है। (Chintan se sahi nirnay liya ja sakta hai.)"
+                    },
+                    {
+                      "id": "95",
+                      "word": "धन्यवाद",
+                      "pronunciation": "dhanyavaad",
+                      "meaning": "thank you",
+                      "part_of_speech": "noun",
+                      "difficulty": "easy",
+                      "lesson_no": 5,
+                      "when_to_say": "When expressing gratitude",
+                      "example": "आपकी मदद के लिए धन्यवाद। (Aapki madad ke liye dhanyavaad.)"
+                    },
+                    {
+                      "id": "96",
+                      "word": "अनुशासन",
+                      "pronunciation": "anushasan",
+                      "meaning": "discipline",
+                      "part_of_speech": "noun",
+                      "difficulty": "medium",
+                      "lesson_no": 5,
+                      "when_to_say": "When discussing rules or orderliness",
+                      "example": "अनुशासन से सफलता मिलती है। (Anushasan se safalta milti hai.)"
+                    },
+                    {
+                      "id": "97",
+                      "word": "परिणति",
+                      "pronunciation": "parinati",
+                      "meaning": "consequence",
+                      "part_of_speech": "noun",
+                      "difficulty": "difficult",
+                      "lesson_no": 6,
+                      "when_to_say": "When discussing outcomes or effects",
+                      "example": "यह निर्णय की परिणति है। (Yeh nirnay ki parinati hai.)"
+                    },
+                    {
+                      "id": "98",
+                      "word": "सामंजस्य",
+                      "pronunciation": "samanjasya",
+                      "meaning": "harmony",
+                      "part_of_speech": "noun",
+                      "difficulty": "medium",
+                      "lesson_no": 6,
+                      "when_to_say": "When referring to unity or coordination",
+                      "example": "सामंजस्य से जीवन सरल बनता है। (Samanjasya se jeevan saral banta hai.)"
+                    },
+                    {
+                      "id": "99",
+                      "word": "समर्पण",
+                      "pronunciation": "samarpan",
+                      "meaning": "dedication",
+                      "part_of_speech": "noun",
+                      "difficulty": "medium",
+                      "lesson_no": 7,
+                      "when_to_say": "When referring to commitment or devotion",
+                      "example": "समर्पण से हर काम पूरा होता है। (Samarpan se har kaam poora hota hai.)"
+                    },
+                    {
+                      "id": "100",
+                      "word": "सृजन",
+                      "pronunciation": "srijan",
+                      "meaning": "creation",
+                      "part_of_speech": "noun",
+                      "difficulty": "medium",
+                      "lesson_no": 7,
+                      "when_to_say": "When referring to innovation or invention",
+                      "example": "सृजन से नए विचार आते हैं। (Srijan se naye vichar aate hain.)"
+                    },
+                    {
+                      "id": "101",
+                      "word": "विकल्प",
+                      "pronunciation": "vikalp",
+                      "meaning": "alternative",
+                      "part_of_speech": "noun",
+                      "difficulty": "medium",
+                      "lesson_no": 8,
+                      "when_to_say": "When discussing choices or substitutes",
+                      "example": "हमें हमेशा विकल्प तैयार रखना चाहिए। (Humein hamesha vikalp tayar rakhna chahiye.)"
+                    },
+                    {
+                      "id": "102",
+                      "word": "समाधान",
+                      "pronunciation": "samadhan",
+                      "meaning": "solution",
+                      "part_of_speech": "noun",
+                      "difficulty": "medium",
+                      "lesson_no": 8,
+                      "when_to_say": "When discussing resolutions or answers",
+                      "example": "हर समस्या का समाधान होता है। (Har samasya ka samadhan hota hai.)"
+                    },
+                    {
+                      "id": "103",
+                      "word": "विश्लेषण",
+                      "pronunciation": "vishleshan",
+                      "meaning": "analysis",
+                      "part_of_speech": "noun",
+                      "difficulty": "difficult",
+                      "lesson_no": 9,
+                      "when_to_say": "When referring to detailed examination",
+                      "example": "परिणाम का विश्लेषण जरूरी है। (Parinaam ka vishleshan zaroori hai.)"
+                    },
+                    {
+                      "id": "104",
+                      "word": "निर्भरता",
+                      "pronunciation": "nirbharta",
+                      "meaning": "dependence",
+                      "part_of_speech": "noun",
+                      "difficulty": "medium",
+                      "lesson_no": 9,
+                      "when_to_say": "When discussing reliance or support",
+                      "example": "अपनी निर्भरता कम करनी चाहिए। (Apni nirbharta kam karni chahiye.)"
+                    },
+                    {
+                      "id": "105",
+                      "word": "प्रगति",
+                      "pronunciation": "pragati",
+                      "meaning": "progress",
+                      "part_of_speech": "noun",
+                      "difficulty": "medium",
+                      "lesson_no": 2,
+                      "when_to_say": "When referring to development or growth",
+                      "example": "प्रगति निरंतर प्रयास से होती है। (Pragati nirantar prayas se hoti hai.)"
+                    },
+                    {
+                      "id": "106",
+                      "word": "आभास",
+                      "pronunciation": "abhaas",
+                      "meaning": "realization",
+                      "part_of_speech": "noun",
+                      "difficulty": "difficult",
+                      "lesson_no": 4,
+                      "when_to_say": "When referring to awareness or understanding",
+                      "example": "मुझे अब उसकी अहमियत का आभास हुआ। (Mujhe ab uski ahmiyat ka abhaas hua.)"
+                    }
+                  
+
+              
   ]
   

@@ -40,7 +40,7 @@ const Navbar = () => {
       <div className="navbar bg-[#EEFBF3] p-4 rounded-2xl border border-green-300 ">
       <div className="navbar-start">
         <div className="dropdown">
-            <Link to='/' className=" hidden md:flex">
+            <Link to='/' className=" md:flex">
                 <h1 className="text-3xl ralewayfont font-bold">Lingo<span className="text-[#309255]">Bingo</span></h1>
             </Link>
           <label tabIndex={0} className="btn btn-ghost lg:hidden">

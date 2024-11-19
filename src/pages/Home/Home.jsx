@@ -9,6 +9,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import { useEffect } from "react";
+import Review from "../../components/Revew/Review";
 
 const Home = () => {
 
@@ -39,6 +40,7 @@ const Home = () => {
       >
         <LearningAchievementsSection></LearningAchievementsSection>
       </div>
+      <Review></Review>
     </div>
   );
 };
