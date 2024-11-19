@@ -79,7 +79,7 @@ const Review = () => {
          Students gave their <span>Feedback</span>
       </h2>
       <div className="review-container flex flex-col items-center md:flex-row flex-wrap">
-        {reviews.slice(currentIndex, currentIndex + 3).map((review, index) => (
+        {reviews.slice(currentIndex, currentIndex + 4).map((review, index) => (
           <div key={index} className="review-card">
             <h3 className="text-2xl ">{review.name}</h3>
             <p className="role">{review.role}</p>
