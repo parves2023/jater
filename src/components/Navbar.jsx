@@ -41,7 +41,7 @@ const Navbar = () => {
       <div className="navbar-start">
         <div className="dropdown">
             <Link to='/' className=" md:flex">
-                <h1 className="text-3xl ralewayfont font-bold">Lingo<span className="text-[#309255]">Bingo</span></h1>
+                <h1 className="md:text-3xl text-2xl ralewayfont font-bold">Lingo<span className="text-[#309255]">Bingo</span></h1>
             </Link>
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
@@ -73,9 +73,19 @@ const Navbar = () => {
       <div className="navbar-end">
      
         {user ? (
-          <button onClick={handleSignOut}  className="btn bg-white px-10 hover:bg-green-800 hover:text-white font-medium border border-green-500">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-3">
+            <div className="flex items-center gap-2 md:flex-row-reverse flex-row">
+            <img
+            src={user?.photoURL || "https://via.placeholder.com/150"}
+            alt="Profile"
+            className="w-10 mx-auto rounded-full ring ring-green-300 text-center"
+          />
+            <h2 className="text-xs">Welcome {user?.displayName}</h2>
+            </div>
+            <button onClick={handleSignOut}  className="btn bg-white px-10 hover:bg-green-800 hover:text-white font-medium border border-green-500">
             Sign Out
           </button>
+          </div>
         ) : (
           <Link to="/login">
             <button className="btn bg-white px-10 hover:bg-green-800 hover:text-white font-medium border border-green-500">Login</button>
