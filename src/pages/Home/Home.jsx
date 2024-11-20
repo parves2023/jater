@@ -43,6 +43,9 @@ const Home = () => {
         <LearningAchievementsSection></LearningAchievementsSection>
       </div>
       <Review></Review>
+      <div className="hidden">
+        check
+      </div>
     </div>
   );
 };
