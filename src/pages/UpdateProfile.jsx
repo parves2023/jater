@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../providers/AuthProvider";
 
 const UpdateProfile = () => {
-  const { auth } = useContext(AuthContext);
+  const { auth, setUpdateImgname, updateimgname } = useContext(AuthContext);
   const [name, setName] = useState(auth.currentUser?.displayName || "");
   const [photoURL, setPhotoURL] = useState(auth.currentUser?.photoURL || "");
   const navigate = useNavigate();
@@ -32,7 +32,8 @@ const UpdateProfile = () => {
           position: "top-right",
           autoClose: 2000,
         });
-        setTimeout(() => navigate("/my-profile"), 2000); 
+        setUpdateImgname(!updateimgname);
+        setTimeout(() => navigate("/my-profile"), 2000);
       })
       .catch((error) => {
         toast.error("Failed to update profile", {
@@ -75,7 +76,10 @@ const UpdateProfile = () => {
           />
         </div>
         <div className="form-control mt-6">
-          <button type="submit" className="btn bg-green-50 px-10 hover:bg-green-800 hover:text-white font-medium border border-green-500">
+          <button
+            type="submit"
+            className="btn bg-green-50 px-10 hover:bg-green-800 hover:text-white font-medium border border-green-500"
+          >
             Update Profile
           </button>
         </div>

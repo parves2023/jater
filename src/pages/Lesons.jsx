@@ -32,15 +32,46 @@ function Lessons() {
     fetchLessons();
   }, [id]);
 
-  const speakWord = (word, lang = "en-US") => {
+  const speakHindi = (word) => {
     if ("speechSynthesis" in window) {
       const utterance = new SpeechSynthesisUtterance(word);
-      utterance.lang = lang; 
+      utterance.lang = "hi-IN";
+  
+      // Ensure the correct voice for Hindi is used if available
+      const voices = window.speechSynthesis.getVoices();
+      const hindiVoice = voices.find(voice => voice.lang === "hi-IN");
+      if (hindiVoice) {
+        utterance.voice = hindiVoice;
+      }
+  
       window.speechSynthesis.speak(utterance);
     } else {
       alert("Sorry, your browser does not support text-to-speech!");
     }
   };
+  
+
+  const speakWord = (word, lang = "en-US") => {
+    if ("speechSynthesis" in window) {
+      const utterance = new SpeechSynthesisUtterance(word);
+      utterance.lang = lang;
+  
+      // Optional: Log available voices for debugging
+      const voices = window.speechSynthesis.getVoices();
+      console.log(voices);
+  
+      // Select a specific voice if needed
+      const hindiVoice = voices.find(voice => voice.lang === lang);
+      if (hindiVoice) {
+        utterance.voice = hindiVoice;
+      }
+  
+      window.speechSynthesis.speak(utterance);
+    } else {
+      alert("Sorry, your browser does not support text-to-speech!");
+    }
+  };
+  
   
 
 
@@ -94,7 +125,8 @@ function Lessons() {
             >
               When to Say
             </button>
-            <div   onClick={() => speakWord(word.meaning)} className="flex gap-2 ml-4 items-center cursor-pointer btn btn-sm bg-white px-6 hover:bg-green-800 hover:text-white font-medium border border-green-500"><IoVolumeHighOutline /> SpeakUp</div>
+            <div   onClick={() => {speakWord(word.meaning);speakHindi(word.word);
+}} className="flex gap-2 ml-4 items-center cursor-pointer btn btn-sm bg-white px-6 hover:bg-green-800 hover:text-white font-medium border border-green-500"><IoVolumeHighOutline /> SpeakUp</div>
            </div>
           </div>
         ))}
