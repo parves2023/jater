@@ -9,7 +9,7 @@ const About = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000, 
-      once: true, 
+      once: false, 
     });
   }, []);
 
@@ -39,7 +39,7 @@ const About = () => {
         {/* Card 1 */}
         <div
           className="space-y-4 bg-white p-6 rounded-lg shadow-lg border border-gray-200"
-          data-aos="fade-right"
+          data-aos="fade-up"
         >
           <h4 className="font-semibold text-xl text-[#309255]">📝 Curated Vocabulary Lists</h4>
           <p className="text-gray-600">
@@ -50,7 +50,7 @@ const About = () => {
         {/* Card 2 */}
         <div
           className="space-y-4 bg-white p-6 rounded-lg shadow-lg border border-gray-200"
-          data-aos="fade-left"
+          data-aos="fade-up"
         >
           <h4 className="font-semibold text-xl text-[#309255]">📚 Interactive Quizzes</h4>
           <p className="text-gray-600">
@@ -61,7 +61,7 @@ const About = () => {
         {/* Card 3 */}
         <div
           className="space-y-4 bg-white p-6 rounded-lg shadow-lg border border-gray-200"
-          data-aos="fade-right"
+          data-aos="fade-down"
         >
           <h4 className="font-semibold text-xl text-[#309255]">🎯 Personalized Learning Paths</h4>
           <p className="text-gray-600">
@@ -72,7 +72,7 @@ const About = () => {
         {/* Card 4 */}
         <div
           className="space-y-4 bg-white p-6 rounded-lg shadow-lg border border-gray-200"
-          data-aos="fade-left"
+          data-aos="fade-down"
         >
           <h4 className="font-semibold text-xl text-[#309255]">💪 Motivational Content</h4>
           <p className="text-gray-600">
@@ -83,13 +83,25 @@ const About = () => {
         {/* Card 5 */}
         <div
           className="space-y-4 bg-white p-6 rounded-lg shadow-lg border border-gray-200"
-          data-aos="fade-right"
+          data-aos="flip-up"
         >
           <h4 className="font-semibold text-xl text-[#309255]">🌍 Real-Life Examples</h4>
           <p className="text-gray-600">
             Learn how each vocabulary word is used in real-world contexts with example sentences, so you not only remember the word but also understand how to apply it in conversation.
           </p>
         </div>
+
+         {/* Card 6 */}
+         <div
+          className="space-y-4 bg-white p-6 rounded-lg shadow-lg border border-gray-200"
+          data-aos="flip-up"
+        >
+          <h4 className="font-semibold text-xl text-[#309255]">🌍 Fast Learning Environment</h4>
+          <p className="text-gray-600">
+            You will learn each vocabulary and sentences, In a very short time with good environment and also understand how to apply it in conversation.
+          </p>
+        </div>
+
       </div>
     </section>
 

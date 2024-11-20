@@ -29,10 +29,10 @@ const Home = () => {
        <Slider></Slider>
        </div>
       <About></About>
-      <div data-aos="zoom-out-left">
+      <div data-aos="zoom-in-down">
         <SuccessSection></SuccessSection>
       </div>
-      <div data-aos="zoom-out-right">
+      <div data-aos="zoom-in-up">
         <JoyfulMomentsSection></JoyfulMomentsSection>
       </div>
       <div
