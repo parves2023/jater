@@ -1,14 +1,15 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useContext, useRef } from "react";
+import { useContext, useRef, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import GoogleLoginButton from "../../components/GoogleLoginButton";
-import { sendPasswordResetEmail } from "firebase/auth";
+
 
 const Login = () => {
-  const { signIn, signInGoogle,auth,ForgotPassword } = useContext(AuthContext);
+  const { signIn, signInGoogle,ForgotPassword } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const emailRef = useRef(); // Moved emailRef to the top-level
+  const [Error, setError] = useState("");
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -20,10 +21,11 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         // navigate after login
+        setError('');
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
-
+        setError(error.message);
       });
   };
   const handleForgotPassword = ()=>{
@@ -80,6 +82,9 @@ const Login = () => {
             <button className="btn bg-green-50 px-10 hover:bg-green-800 hover:text-white font-medium border border-green-500">Login</button>
           </div>
         </form>
+        {Error && (
+              <p className="text-red-600 text-center text-sm my-3">{Error}</p>
+            )}
         <p className="text-center mt-4">
           Do not have an account{" "}
           <Link className="text-blue-600 font-bold" to="/register">

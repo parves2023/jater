@@ -58,7 +58,6 @@ function Lessons() {
   
       // Optional: Log available voices for debugging
       const voices = window.speechSynthesis.getVoices();
-      console.log(voices);
   
       // Select a specific voice if needed
       const hindiVoice = voices.find(voice => voice.lang === lang);

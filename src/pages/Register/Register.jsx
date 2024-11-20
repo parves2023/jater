@@ -41,15 +41,14 @@ const Register = () => {
           setTimeout(() => navigate("/"), 2000); // Delay navigation to show toast
         })
         .catch((error) => {
-          toast.error("Failed to update profile", {
+          toast.error(`error ${error.message}`, {
             position: "top-center",
             autoClose: 2000,
           });
-
         });
     })
-    .catch(() => {
-      toast.error("Something went wrong!", {
+    .catch((error) => {
+      toast.error(`error ${error.message}`, {
         position: "top-center",
         autoClose: 2000,
       });
