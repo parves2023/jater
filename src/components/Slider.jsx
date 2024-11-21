@@ -34,12 +34,11 @@ const Slider = () => {
 
 
   return (
-    <div className="w-full h-[400px] md:h-[500px] container mx-auto">
+    <div className="w-full h-[35vh] md:h-[500px] container mx-auto">
       <Carousel
         showArrows
-        autoPlay
+        
         infiniteLoop
-        interval={4000}
         showThumbs={false}
         showStatus={false}
         className="text-center"
@@ -53,7 +52,7 @@ const Slider = () => {
             <img
               src={banner.image}
               alt={`Slide ${index + 1}`}
-              className="h-[30rem] object-cover brightness-50 rounded-2xl"
+              className="md:h-[30rem] h-[40vh] object-cover brightness-50 rounded-2xl"
             />
 
             {/* Centered text */}
