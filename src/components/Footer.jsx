@@ -4,15 +4,15 @@ const Footer = () => {
       <div className="container mx-auto grid md:grid-cols-4 gap-8 px-4">
         {/* Contact Section */}
         <div>
-          <h2 className="text-2xl font-bold text-green-800">EduLe</h2>
+          <h2 className="text-2xl font-bold ">Lingo<span className="text-green-800 ">Bingo</span></h2>
           <p className="mt-3 text-gray-700">Caribbean Ct</p>
           <p className="text-gray-700">Haymarket, Virginia (VA)</p>
           <div className="mt-4 space-y-2">
             <p className="text-gray-700">
-              <span className="font-bold">Email:</span> address@gmail.com
+              <span className="font-bold">Email:</span> parvesmosarof2@gmail.com
             </p>
             <p className="text-gray-700">
-              <span className="font-bold">Phone:</span> (970) 262-1413
+              <span className="font-bold">Phone:</span> 01516502364
             </p>
           </div>
           <div className="flex gap-4 mt-4">
@@ -35,9 +35,9 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-bold text-green-800">Category</h3>
           <ul className="mt-3 space-y-2">
-            <li className="text-gray-700">Creative Writing</li>
-            <li className="text-gray-700">Film & Video</li>
-            <li className="text-gray-700">Graphic Design</li>
+            <li className="text-gray-700">Learn Hindi</li>
+            <li className="text-gray-700">Learn Bangla</li>
+            <li className="text-gray-700">Learn Arabic</li>
             <li className="text-gray-700">UI/UX Design</li>
             <li className="text-gray-700">Business Analytics</li>
             <li className="text-gray-700">Marketing</li>
@@ -60,7 +60,7 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-bold text-green-800">Subscribe</h3>
           <p className="mt-3 text-gray-700">
-            Lorem Ipsum has been the industry's standard dummy text ever since.
+            Subscribe us so you do not loss any update from us and cover a long journy with us.
           </p>
           <div className="mt-4">
             <input
@@ -76,7 +76,7 @@ const Footer = () => {
       </div>
 
       <div className="mt-10 bg-gray-800 text-center text-white py-4">
-        <p>© 2024 <span className="text-green-400">LINGOBINGO</span> Made with ❤ by <span className="text-blue-600 cursor-pointer">Anamul Hauqe</span></p>
+        <p>© 2024 <span className="text-green-400">LINGOBINGO</span> Made with ❤ by <span className="text-blue-600 cursor-pointer"><a href="https://www.facebook.com/profile.php?id=100055235052516">Anamul Hauqe</a></span></p>
       </div>
     </footer>
   );
