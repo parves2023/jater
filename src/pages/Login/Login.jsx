@@ -3,96 +3,99 @@ import { useContext, useRef, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import GoogleLoginButton from "../../components/GoogleLoginButton";
 
-
 const Login = () => {
-  const { signIn, signInGoogle,ForgotPassword } = useContext(AuthContext);
+  const { signIn, signInGoogle, ForgotPassword } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
-  const emailRef = useRef(); // Moved emailRef to the top-level
-  const [Error, setError] = useState("");
+  const emailRef = useRef();
+  const [error, setError] = useState("");
 
   const handleLogin = (e) => {
     e.preventDefault();
-
     const form = new FormData(e.currentTarget);
     const email = form.get("email");
     const password = form.get("password");
 
     signIn(email, password)
-      .then((result) => {
-        // navigate after login
-        setError('');
+      .then(() => {
+        setError("");
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         setError(error.message);
       });
   };
-  const handleForgotPassword = ()=>{
-    ForgotPassword(emailRef)
-    navigate('/forgotpass')
-  }
 
-
+  const handleForgotPassword = () => {
+    ForgotPassword(emailRef);
+    navigate("/forgotpass");
+  };
 
   return (
-    <div className="my-5">
-      <div>
-    
-        <h1 className="text-3xl mt-7 ralewayfont font-bold text-center mb-6">
-        Please <span className="text-[#309255]">Login</span>
-      </h1>
-        <form onSubmit={handleLogin} className="md:w-3/4 lg:w-1/2 mx-auto">
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Email</span>
-            </label>
+    <div className="bg-[#d0d9d0] min-h-screen flex items-center justify-center">
+      <div className="bg-white p-8 py-20 rounded-2xl shadow-md w-full max-w-md">
+        <h2 className="text-2xl font-semibold text-center text-gray-800">Login to Account</h2>
+        <p className="text-sm text-gray-900 text-center mt-4 mb-14">
+          Please enter your email and password to continue
+        </p>
+        <form onSubmit={handleLogin} className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Email address</label>
             <input
               type="email"
-              required
               name="email"
-              ref={emailRef} // Attach ref here
-              placeholder="Email"
-              className="input input-bordered"
+              required
+              ref={emailRef}
+              placeholder="your@email.com"
+              className="mt-1 w-full px-4 py-2 border border-green-600 rounded-sm focus:outline-none focus:ring-2 focus:ring-green-500"
             />
           </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Password</span>
-            </label>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mt-8">Password</label>
             <input
               type="password"
-              required
               name="password"
-              placeholder="Password"
-              className="input input-bordered"
+              required
+              placeholder="••••••••"
+              className="mt-1 mb-3 w-full px-4 py-2 border border-green-600 rounded-sm focus:outline-none focus:ring-2 focus:ring-green-500"
             />
-            <label className="label">
-              <div>
-                <a
-                  onClick={handleForgotPassword} // Call forgot password handler
-                  className="label-text-alt link link-hover cursor-pointer"
-                >
-                  Forgot password?
-                </a>
-              </div>
-            </label>
+<div className="flex justify-between items-center mt-2 text-sm">
+  <label className="flex items-center space-x-2">
+  <input
+  type="checkbox"
+  className="checkbox checkbox-sm rounded-sm checked:bg-green-600 "
+/>
+    <span>Remember Password</span>
+  </label>
+  <span
+    onClick={handleForgotPassword}
+    className="font-normal cursor-pointer hover:underline"
+  >
+    Forgot Password?
+  </span>
+</div>
+
           </div>
-          <div className="form-control mt-6">
-            <button className="btn bg-green-50 px-10 hover:bg-green-800 hover:text-white font-medium border border-green-500">Login</button>
-          </div>
+
+          <button
+            type="submit"
+            className="w-full bg-green-700 hover:bg-green-800 text-white font-semibold py-2 rounded-md transition"
+          >
+            Sign in
+          </button>
         </form>
-        {Error && (
-              <p className="text-red-600 text-center text-sm my-3">{Error}</p>
-            )}
-        <p className="text-center mt-4">
-          Do not have an account{" "}
-          <Link className="text-blue-600 font-bold" to="/register">
+
+        {error && <p className="text-red-600 text-center text-sm mt-3">{error}</p>}
+
+        <p className="text-sm text-center mt-4">
+          Do not have an account?{" "}
+          <Link to="/register" className="text-blue-600 font-semibold hover:underline">
             Register
           </Link>
         </p>
-        <div>
-          <GoogleLoginButton signInGoogle={signInGoogle}></GoogleLoginButton>
+
+        <div className="mt-4 hidden">
+          <GoogleLoginButton signInGoogle={signInGoogle} />
         </div>
       </div>
     </div>
