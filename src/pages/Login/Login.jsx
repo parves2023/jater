@@ -33,7 +33,7 @@ const Login = () => {
 
   return (
     <div className="bg-[#d0d9d0] min-h-screen flex items-center justify-center">
-      <div className="bg-white p-8 py-20 rounded-2xl shadow-md w-full max-w-md">
+      <div className="bg-white p-8 py-20 rounded-2xl shadow-md w-full max-w-md min-h-[40rem] flex flex-col justify-center">
         <h2 className="text-2xl font-semibold text-center text-gray-800">Login to Account</h2>
         <p className="text-sm text-gray-900 text-center mt-4 mb-14">
           Please enter your email and password to continue
@@ -87,7 +87,7 @@ const Login = () => {
 
         {error && <p className="text-red-600 text-center text-sm mt-3">{error}</p>}
 
-        <p className="text-sm text-center mt-4">
+        <p className="text-sm text-center mt-4 hidden">
           Do not have an account?{" "}
           <Link to="/register" className="text-blue-600 font-semibold hover:underline">
             Register
