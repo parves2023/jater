@@ -16,6 +16,10 @@ import Checkemail from "../components/Checkemail";
 import ResetPassword from "../components/ResetPassword";
 import DashboardHome from "../pages/dashboard/DashboardHome";
 import DashboardLayout from "../layouts/DashboardLayout";
+import UsersTable from "../pages/dashboard/components/UsersTable";
+import AdminProfile from "../pages/dashboard/components/AdminProfile";
+import UserInformation from "../pages/dashboard/UserInformation";
+import Subscription from "../pages/dashboard/Subscription";
 
 
 const router = createBrowserRouter([
@@ -40,16 +44,18 @@ const router = createBrowserRouter([
   { path: '/reset-password', element: <ResetPassword /> },
 
   // Dashboard routes
-  {
-    path: '/dashboard',
-    element: <DashboardLayout />,
-    children: [
-      { path: 'statistics', element: <DashboardHome /> },
-      { path: 'user-info', element: <div>user info</div> },
-      { path: 'subscription', element: <div>user subscription</div> },
-      { path: 'settings', element: <div>settings</div> }
-    ]
-  }
+{
+  path: '/dashboard',
+  element: <DashboardLayout />,
+  children: [
+    { path: 'statistics', element: <DashboardHome /> },
+    { path: 'user-info', element: <UserInformation /> },
+    { path: 'subscription', element: <Subscription /> },
+    { path: 'settings/profile', element: <div>profile</div> },
+    { path: 'settings/terms', element: <>terms</> },
+    { path: 'settings/privacy', element: <div>privacy</div> }
+  ]
+}
 ]);
 
 export default router;
