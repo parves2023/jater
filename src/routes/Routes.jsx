@@ -21,7 +21,8 @@ import AdminProfile from "../pages/dashboard/components/AdminProfile";
 import UserInformation from "../pages/dashboard/UserInformation";
 import Subscription from "../pages/dashboard/Subscription";
 import ProfileSettings from "../components/ProfileSetting";
-import TermsPage from "../components/TermsPage";
+import TermsPage from "../pages/dashboard/TermsPage";
+import Privacypage from "../pages/dashboard/Privacypage";
 
 
 const router = createBrowserRouter([
@@ -55,7 +56,7 @@ const router = createBrowserRouter([
     { path: 'subscription', element: <Subscription /> },
     { path: 'settings', element: <ProfileSettings /> },
     { path: 'settings/terms', element: <TermsPage /> },
-    { path: 'settings/privacy', element: <div>privacy</div> }
+    { path: 'settings/privacy', element: <Privacypage /> },
   ]
 }
 ]);

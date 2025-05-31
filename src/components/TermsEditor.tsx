@@ -1,5 +1,4 @@
 import { CiEdit } from "react-icons/ci";
-
 import { useState } from 'react';
 import AdminProfile from '../pages/dashboard/components/AdminProfile';
 
@@ -42,40 +41,42 @@ export default function TermsEditor() {
   };
 
   return (
-    <div className="w-full min-h-screen px-6">
-        <div className=' mb-8'>
-            <AdminProfile />
-        </div>
-      <div className="relative w-full ">
-        {isEditing ? <CiEdit /> :        <button 
+    <div className="w-full min-h-screen ">
+      <div className='mb-8'>
+        <AdminProfile />
+      </div>
+      
+      <div className="relative w-full">
+        <button 
           onClick={handleToggleEdit}
-          className="absolute top-0  right-0 px-6 py-2 mr-12 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
+          className="absolute top-0 right-0 flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
         >
-         cancle
-        </button>}
-        {/* <button 
-          onClick={handleToggleEdit}
-          className="absolute top-0  right-0 px-6 py-2 mr-12 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
-        >
-          {isEditing ? 'Cancel' : 'Edit'}
-        </button> */}
+          {isEditing ? (
+            'Cancel'
+          ) : (
+            <>
+              <CiEdit className="text-xl" />
+              <span>Edit</span>
+            </>
+          )}
+        </button>
       </div>
 
       {isEditing ? (
         <textarea
-          className="w-full min-h-[calc(100vh-100px)] p-4 text-lg font-medium"
+          className="w-full min-h-[calc(100vh-180px)] p-4 text-lg font-medium border rounded-lg"
           value={terms}
           onChange={(e) => setTerms(e.target.value)}
         />
       ) : (
-        <div className="w-full min-h-[calc(100vh-100px)] p-4 text-lg font-medium space-y-6">
+        <div className="w-full min-h-[calc(100vh-180px)] p-4 text-lg font-medium space-y-6 font-poppins">
           {terms.trim().split('\n\n').map((section) => {
             const [numberAndTitle, ...content] = section.split('\n');
             const [number, ...titleParts] = numberAndTitle.split('. ');
             const title = titleParts.join('. ');
             
             return (
-              <div key={number} className='font-poppins'>
+              <div key={number}>
                 <p className="font-bold text-xl mb-2">
                   {number}. {title}
                 </p>
@@ -89,10 +90,10 @@ export default function TermsEditor() {
       )}
 
       {isEditing && (
-        <div className="mt-4 flex justify-center items-center">
+        <div className="mt-4 flex justify-center">
           <button 
             onClick={handleSave}
-            className="px-6 mx-auto py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
+            className="px-6 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
           >
             Save Changes
           </button>

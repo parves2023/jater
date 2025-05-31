@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FiEye, FiEyeOff, FiUser, FiLock, FiEdit } from 'react-icons/fi';
+import AdminProfile from '../pages/dashboard/components/AdminProfile';
 
 const ProfileSettings = () => {
   const [activeTab, setActiveTab] = useState('profile');
@@ -33,7 +34,11 @@ const ProfileSettings = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6">
+    <>
+       <div className="space-y-6 bg-gray-50 min-h-screen p-6">
+
+ <AdminProfile />
+    <div className="max-w-2xl mx-auto ">
       {/* Profile Header with Image */}
       <div className="flex flex-col items-center mb-8">
         <div className="relative mb-4">
@@ -216,6 +221,11 @@ const ProfileSettings = () => {
         </div>
       )}
     </div>
+
+
+    </div>
+    
+    </>
   );
 };
 
