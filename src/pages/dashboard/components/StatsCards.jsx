@@ -1,58 +1,54 @@
 import React from 'react'
 import { User, DollarSign, Users, TrendingUp } from 'lucide-react';
 
+const stats = [
+  {
+    title: "Total User",
+    value: "12,530",
+    icon: <User className="w-5 h-5 text-gray-600" />,
+    trend: "3.1",
+    change: "+0.49% this week",
+  },
+  {
+    title: "Revenue",
+    value: "$3,530",
+    icon: <DollarSign className="w-5 h-5 text-gray-600" />,
+    trend: "2.8",
+    change: "+0.32% this week",
+  },
+  {
+    title: "Total Subscribe",
+    value: "8,245",
+    icon: <Users className="w-5 h-5 text-gray-600" />,
+    trend: "4.2",
+    change: "+0.67% this week",
+  },
+];
+
 const StatsCards = () => {
   return (
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Total User Card */}
-        <div className="bg-white rounded-xl border border-green-600 p-6 relative flex flex-col items-center text-center">
-          <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mb-4">
-            <User className="w-5 h-5 text-gray-600" />
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+      {stats.map((stat, index) => (
+        <div
+          key={index}
+          className="bg-white rounded-xl border border-green-600 p-4 sm:p-6 flex flex-col items-center text-center"
+        >
+          <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mb-3 sm:mb-4">
+            {stat.icon}
           </div>
-          <h3 className="text-gray-600 text-sm font-medium mb-2">Total User</h3>
-          <p className="text-3xl font-bold text-gray-900 mb-3 font-sans">12,530</p>
-          <div className="flex items-center gap-2">
+          <h3 className="text-gray-600 text-sm sm:text-base font-medium mb-1 sm:mb-2">{stat.title}</h3>
+          <p className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 sm:mb-3 font-sans">{stat.value}</p>
+          <div className="flex items-center gap-1 sm:gap-2 text-sm font-sans">
             <div className="flex items-center gap-1">
               <TrendingUp className="w-4 h-4 text-green-600" />
-              <span className="text-green-600 text-sm font-medium font-sans">3.1</span>
+              <span className="text-green-600 font-medium">{stat.trend}</span>
             </div>
-            <span className="text-gray-500 text-sm font-sans">+0.49% this week</span>
+            <span className="text-gray-500">{stat.change}</span>
           </div>
         </div>
+      ))}
+    </div>
+  );
+};
 
-        {/* Revenue Card */}
-        <div className="bg-white rounded-xl border border-green-600 p-6 relative flex flex-col items-center text-center">
-          <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mb-4">
-            <DollarSign className="w-5 h-5 text-gray-600" />
-          </div>
-          <h3 className="text-gray-600 text-sm font-medium mb-2">Revenue</h3>
-          <p className="text-3xl font-bold text-gray-900 mb-3 font-sans">$3,530</p>
-          <div className="flex items-center gap-2">
-            <div className="flex items-center gap-1">
-              <TrendingUp className="w-4 h-4 text-green-600" />
-              <span className="text-green-600 text-sm font-medium font-sans">2.8</span>
-            </div>
-            <span className="text-gray-500 text-sm font-sans">+0.32% this week</span>
-          </div>
-        </div>
-
-        {/* Total Subscribe Card */}
-        <div className="bg-white rounded-xl border border-green-600 p-6 relative flex flex-col items-center text-center">
-          <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mb-4">
-            <Users className="w-5 h-5 text-gray-600" />
-          </div>
-          <h3 className="text-gray-600 text-sm font-medium mb-2">Total Subscribe</h3>
-          <p className="text-3xl font-bold text-gray-900 mb-3 font-sans">8,245</p>
-          <div className="flex items-center gap-2">
-            <div className="flex items-center gap-1">
-              <TrendingUp className="w-4 h-4 text-green-600" />
-              <span className="text-green-600 text-sm font-medium font-sans">4.2</span>
-            </div>
-            <span className="text-gray-500 text-sm font-sans">+0.67% this week</span>
-          </div>
-        </div>
-      </div>
-  )
-}
-
-export default StatsCards
+export default StatsCards;

@@ -10,7 +10,7 @@ import { Graphs } from './components/Graphs';
 
 export default function DashboardHome() {
   return (
-    <div className="space-y-6 bg-gray-50 min-h-screen p-6">
+    <div className="space-y-6 bg-gray-50 min-h-screen p-6 ">
 
       
       {/* Admin Profile */}
@@ -24,7 +24,9 @@ export default function DashboardHome() {
       <Graphs />
 
       {/* Recent Users Table */}
-      <UsersTable />
+      <div className='overflow-x-auto overflow-auto' >
+        <UsersTable />
+      </div>
 
 
     </div>
