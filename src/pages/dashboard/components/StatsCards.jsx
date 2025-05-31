@@ -5,7 +5,7 @@ const StatsCards = () => {
   return (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Total User Card */}
-        <div className="bg-white rounded-xl border border-gray-200 p-6 relative flex flex-col items-center text-center">
+        <div className="bg-white rounded-xl border border-green-600 p-6 relative flex flex-col items-center text-center">
           <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mb-4">
             <User className="w-5 h-5 text-gray-600" />
           </div>
@@ -21,7 +21,7 @@ const StatsCards = () => {
         </div>
 
         {/* Revenue Card */}
-        <div className="bg-white rounded-xl border border-gray-200 p-6 relative flex flex-col items-center text-center">
+        <div className="bg-white rounded-xl border border-green-600 p-6 relative flex flex-col items-center text-center">
           <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mb-4">
             <DollarSign className="w-5 h-5 text-gray-600" />
           </div>
@@ -37,7 +37,7 @@ const StatsCards = () => {
         </div>
 
         {/* Total Subscribe Card */}
-        <div className="bg-white rounded-xl border border-gray-200 p-6 relative flex flex-col items-center text-center">
+        <div className="bg-white rounded-xl border border-green-600 p-6 relative flex flex-col items-center text-center">
           <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mb-4">
             <Users className="w-5 h-5 text-gray-600" />
           </div>

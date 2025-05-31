@@ -20,6 +20,8 @@ import UsersTable from "../pages/dashboard/components/UsersTable";
 import AdminProfile from "../pages/dashboard/components/AdminProfile";
 import UserInformation from "../pages/dashboard/UserInformation";
 import Subscription from "../pages/dashboard/Subscription";
+import ProfileSettings from "../components/ProfileSetting";
+import TermsPage from "../components/TermsPage";
 
 
 const router = createBrowserRouter([
@@ -51,8 +53,8 @@ const router = createBrowserRouter([
     { path: 'statistics', element: <DashboardHome /> },
     { path: 'user-info', element: <UserInformation /> },
     { path: 'subscription', element: <Subscription /> },
-    { path: 'settings/profile', element: <div>profile</div> },
-    { path: 'settings/terms', element: <>terms</> },
+    { path: 'settings', element: <ProfileSettings /> },
+    { path: 'settings/terms', element: <TermsPage /> },
     { path: 'settings/privacy', element: <div>privacy</div> }
   ]
 }
