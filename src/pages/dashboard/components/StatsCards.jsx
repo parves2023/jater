@@ -39,11 +39,11 @@ const StatsCards = () => {
           <h3 className="text-gray-600 text-sm sm:text-base font-medium mb-1 sm:mb-2">{stat.title}</h3>
           <p className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 sm:mb-3 font-sans">{stat.value}</p>
           <div className="flex items-center gap-1 sm:gap-2 text-sm font-sans">
-            <div className="flex items-center gap-1">
-              <TrendingUp className="w-4 h-4 text-green-600" />
+            <div className="flex items-center gap-1 text-xl">
+              <TrendingUp className="w-6 h-6 text-green-600" />
               <span className="text-green-600 font-medium">{stat.trend}</span>
             </div>
-            <span className="text-gray-500">{stat.change}</span>
+            <span className="text-gray-500 text-xl">{stat.change}</span>
           </div>
         </div>
       ))}

@@ -2,6 +2,7 @@ import { Outlet, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
 import Logo from '../assets/logo.png';
 import { FiHome, FiUser, FiSettings, FiCreditCard, FiLogOut, FiMenu, FiX } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 export default function DashboardLayout() {
   const navigate = useNavigate();
@@ -130,7 +131,9 @@ export default function DashboardLayout() {
       <aside className="hidden  fixed left-0 top-0 w-64 h-screen bg-white shadow-lg md:flex flex-col z-40 overflow-y-auto">
         <div className="p-6">
           <div className="text-xl font-bold mb-6">
+            <Link to="/">
             <img className="mx-auto w-24 h-auto" src={Logo} alt="timber logo" />
+            </Link>
           </div>
           <nav className="flex flex-col gap-2 relative">
             {renderNavLinks()}

@@ -5,28 +5,41 @@ const UsersTable = () => {
   const [selectedUser, setSelectedUser] = useState(null);
   const [showProfile, setShowProfile] = useState(false);
 
-  const usersData = [
-    {
-      id: 12330,
-      name: "Ar Raihan",
-      email: "arraihan815@gmail.com",
-      country: "USA",
-      avatar: "https://media.licdn.com/dms/image/v2/D5603AQHFDLf7-S_rtg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1723765753976?e=1753920000&v=beta&t=iCMyAwdmCg9f1-RHPStNa236nUye5ck354Pa3KTR4P0",
-      accountType: "Standard",
-      registrationDate: "20/05/2025",
-      sameClass: 8
-    },
-    {
-      id: 12331,
-      name: "Devon Lane",
-      email: "devonlane53@gmail.com",
-      country: "Canada",
-      avatar: "https://img.freepik.com/premium-vector/default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-vector-illustration_561158-3383.jpg",
-      accountType: "Premium",
-      registrationDate: "25/05/2025",
-      sameClass: 12
-    }
-  ];
+const usersData = [
+  {
+    id: 12330,
+    name: "Ar Raihan",
+    email: "arraihan815@gmail.com",
+    country: "USA",
+    avatar: "https://media.licdn.com/dms/image/v2/D5603AQHFDLf7-S_rtg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1723765753976?e=1753920000&v=beta&t=iCMyAwdmCg9f1-RHPStNa236nUye5ck354Pa3KTR4P0",
+    accountType: "Standard",
+    registrationDate: "20/05/2025",
+    sameClass: [
+      "https://randomuser.me/api/portraits/women/1.jpg",
+      "https://randomuser.me/api/portraits/men/2.jpg",
+      "https://randomuser.me/api/portraits/women/3.jpg",
+      "https://randomuser.me/api/portraits/men/4.jpg",
+      "https://randomuser.me/api/portraits/men/5.jpg",
+      "https://randomuser.me/api/portraits/men/5.jpg",
+      "https://randomuser.me/api/portraits/men/5.jpg",
+    ]
+  },
+  {
+    id: 12331,
+    name: "Devon Lane",
+    email: "devonlane53@gmail.com",
+    country: "Canada",
+    avatar: "https://img.freepik.com/premium-vector/default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-vector-illustration_561158-3383.jpg",
+    accountType: "Premium",
+    registrationDate: "25/05/2025",
+    sameClass: [
+      "https://randomuser.me/api/portraits/men/10.jpg",
+      "https://randomuser.me/api/portraits/men/11.jpg",
+      "https://randomuser.me/api/portraits/women/12.jpg"
+    ]
+  }
+];
+
 
   const handleUserClick = (user) => {
     setSelectedUser(user);
@@ -144,7 +157,7 @@ return (
           <p className="text-gray-600 text-sm">{selectedUser.country}</p>
         </div>
 
-        <div className="space-y-4 text-sm">
+        <div className="space-y-4 text-sm text-center">
           <div>
             <p className="text-gray-600">Email</p>
             <p className="text-gray-900 font-medium">{selectedUser.email}</p>
@@ -159,10 +172,30 @@ return (
             <p className="text-gray-600">Registration Date</p>
             <p className="text-gray-900 font-medium">{selectedUser.registrationDate}</p>
           </div>
-          <div>
-            <p className="text-gray-600">People from the same class</p>
-            <p className="text-gray-900 font-medium">+{selectedUser.sameClass} more</p>
-          </div>
+
+
+<div className=" peoplefromdiv flex flex-col items-center">
+  <p className="text-gray-800 font-bold text-sm mb-2 text-center">People from the same class</p>
+  <div className="flex items-center justify-center space-x-[-10px]">
+    {selectedUser.sameClass.slice(0, 5).map((avatar, index) => (
+      <img
+        key={index}
+        src={avatar}
+        className="w-8 h-8 rounded-full border-2 border-white object-cover"
+        alt={`Classmate ${index + 1}`}
+      />
+    ))}
+    {selectedUser.sameClass.length > 5 && (
+      <div className="w-8 h-8 rounded-full bg-gray-200 text-xs text-gray-800 flex items-center justify-center border-2 border-white">
+        +{selectedUser.sameClass.length - 5}
+      </div>
+    )}
+  </div>
+</div>
+
+
+
+
         </div>
       </div>
     )}

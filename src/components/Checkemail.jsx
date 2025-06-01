@@ -25,22 +25,28 @@ function VerificationCodeInput({
     inputRefs.current = inputRefs.current.slice(0, length);
   }, [length]);
 
+  // Focus management
   useEffect(() => {
-    const firstEmptyIndex = value.split('').findIndex((char, index) => !char && index < length);
-    const targetIndex = firstEmptyIndex === -1 ? length - 1 : firstEmptyIndex;
+    // On mount or when enabled, focus the first empty input
+    const firstEmptyIndex = value.split('').findIndex((char) => !char);
+    const targetIndex = firstEmptyIndex === -1 ? Math.min(value.length, length - 1) : firstEmptyIndex;
+    
     if (inputRefs.current[targetIndex] && !disabled) {
-      inputRefs.current[targetIndex]?.focus();
+      inputRefs.current[targetIndex].focus();
       setActiveIndex(targetIndex);
     }
   }, [value, length, disabled]);
 
   const handleInput = (index, inputValue) => {
     const digit = inputValue.replace(/\D/g, '').slice(-1);
+    if (!digit) return;
+
     const newValue = value.split('');
     newValue[index] = digit;
     const updatedValue = newValue.join('').slice(0, length);
     onChange(updatedValue);
 
+    // Move to next input if there's a digit and not last input
     if (digit && index < length - 1) {
       inputRefs.current[index + 1]?.focus();
       setActiveIndex(index + 1);
@@ -50,9 +56,11 @@ function VerificationCodeInput({
   const handleKeyDown = (index, e) => {
     if (e.key === 'Backspace') {
       if (!value[index] && index > 0) {
+        // If current is empty and not first, move left
         inputRefs.current[index - 1]?.focus();
         setActiveIndex(index - 1);
       } else {
+        // Clear current value
         const newValue = value.split('');
         newValue[index] = '';
         onChange(newValue.join(''));

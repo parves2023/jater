@@ -2,7 +2,6 @@ import { CiEdit } from "react-icons/ci";
 import { useState } from 'react';
 import AdminProfile from "./components/AdminProfile";
 
-
 const initialPrivacyPolicy = `
 1. Introduction
 Timber items respect your privacy; This policy explains how we collect, use, and protect your personal data when you use our app.
@@ -56,14 +55,11 @@ export default function Privacypage() {
   };
 
   return (
-      <div className="space-y-6 bg-gray-50 min-h-screen p-6">
-
-      
-  <div className="w-full min-h-screen">
-      <div className='mb-8'>
+    <div className="w-full min-h-screen bg-gray-50 p-6">
+      <div className="mb-8">
         <AdminProfile />
       </div>
-      
+
       <div className="relative w-full">
         <button 
           onClick={handleToggleEdit}
@@ -80,12 +76,12 @@ export default function Privacypage() {
 
       {isEditing ? (
         <textarea
-          className="w-full min-h-[calc(100vh-180px)] p-4 text-base font-normal border rounded-lg"
+          className="w-full min-h-[calc(100vh-180px)] p-4 text-lg font-medium border rounded-lg"
           value={privacyPolicy}
           onChange={(e) => setPrivacyPolicy(e.target.value)}
         />
       ) : (
-        <div className="w-full min-h-[calc(100vh-180px)] p-4 text-base font-normal space-y-4 font-poppins">
+        <div className="w-full min-h-[calc(100vh-180px)] p-4 text-lg font-medium space-y-6 font-poppins">
           {privacyPolicy.trim().split('\n\n').map((section) => {
             const lines = section.split('\n');
             const firstLine = lines[0];
@@ -95,7 +91,7 @@ export default function Privacypage() {
               <div key={firstLine} className="mb-6">
                 <p className="font-bold text-xl mb-2">{firstLine}</p>
                 {remainingLines.map((line, i) => (
-                  <p key={i} className="text-base font-normal my-1">
+                  <p key={i} className="my-1">
                     {line.startsWith('- ') ? '• ' + line.substring(2) : line}
                   </p>
                 ))}
@@ -115,9 +111,6 @@ export default function Privacypage() {
           </button>
         </div>
       )}
-    </div>
-
-
     </div>
   );
 }
