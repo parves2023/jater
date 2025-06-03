@@ -1,6 +1,7 @@
 import { CiEdit } from "react-icons/ci";
 import { useState } from 'react';
 import AdminProfile from "./components/AdminProfile";
+import Swal from "sweetalert2";
 
 const initialPrivacyPolicy = `
 1. Introduction
@@ -46,12 +47,54 @@ If you have questions about this policy, please contact us:
 export default function Privacypage() {
   const [isEditing, setIsEditing] = useState(false);
   const [privacyPolicy, setPrivacyPolicy] = useState(initialPrivacyPolicy);
+  const [editedPrivacyPolicy, setEditedPrivacyPolicy] = useState(initialPrivacyPolicy);
 
-  const handleToggleEdit = () => setIsEditing(!isEditing);
+  const handleToggleEdit = () => {
+    if (isEditing) {
+      Swal.fire({
+        title: 'Discard Changes?',
+        text: "Your unsaved changes will be lost!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#3085d6',
+        confirmButtonText: 'Yes, discard',
+        cancelButtonText: 'No'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          setIsEditing(false);
+          setEditedPrivacyPolicy(privacyPolicy); // reset edits
+        }
+      });
+    } else {
+      setEditedPrivacyPolicy(privacyPolicy); // enter edit mode with original
+      setIsEditing(true);
+    }
+  };
 
   const handleSave = () => {
-    console.log('Saved privacy policy:', privacyPolicy);
-    setIsEditing(false);
+    Swal.fire({
+      title: 'Save Changes?',
+      text: "Do you want to save the updated Privacy Policy?",
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonColor: '#22c55e',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, save it!',
+      cancelButtonText: 'No'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setPrivacyPolicy(editedPrivacyPolicy);
+        setIsEditing(false);
+
+        Swal.fire({
+          icon: 'success',
+          title: 'Saved!',
+          text: 'Privacy policy updated successfully.',
+          confirmButtonColor: '#22c55e',
+        });
+      }
+    });
   };
 
   return (
@@ -77,8 +120,8 @@ export default function Privacypage() {
       {isEditing ? (
         <textarea
           className="w-full min-h-[calc(100vh-180px)] p-4 text-lg font-medium border rounded-lg"
-          value={privacyPolicy}
-          onChange={(e) => setPrivacyPolicy(e.target.value)}
+          value={editedPrivacyPolicy}
+          onChange={(e) => setEditedPrivacyPolicy(e.target.value)}
         />
       ) : (
         <div className="w-full min-h-[calc(100vh-180px)] p-4 text-lg font-medium space-y-6 font-poppins">

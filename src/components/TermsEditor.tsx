@@ -1,6 +1,7 @@
 import { CiEdit } from "react-icons/ci";
 import { useState } from 'react';
 import AdminProfile from '../pages/dashboard/components/AdminProfile';
+import Swal from "sweetalert2";
 
 const initialTerms = `
 1. Acceptance of Terms
@@ -31,13 +32,56 @@ support@timberlensapp.com
 export default function TermsEditor() {
   const [isEditing, setIsEditing] = useState(false);
   const [terms, setTerms] = useState(initialTerms);
+  const [editedTerms, setEditedTerms] = useState(initialTerms);
 
-  const handleToggleEdit = () => setIsEditing(!isEditing);
+  const handleToggleEdit = () => {
+    if (isEditing) {
+      // Confirm cancel
+      Swal.fire({
+        title: 'Discard Changes?',
+        text: "Your unsaved changes will be lost!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#3085d6',
+        confirmButtonText: 'Yes, discard',
+        cancelButtonText: 'No'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          setIsEditing(false);
+          setEditedTerms(terms); // reset edits
+        }
+      });
+    } else {
+      // Enter edit mode
+      setEditedTerms(terms); // copy original to edited
+      setIsEditing(true);
+    }
+  };
 
   const handleSave = () => {
-    // Placeholder for backend save call
-    console.log('Saved terms:', terms);
-    setIsEditing(false);
+    Swal.fire({
+      title: 'Save Changes?',
+      text: "Do you want to save the updated Terms & Conditions?",
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonColor: '#22c55e',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, save it!',
+      cancelButtonText: 'No'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setTerms(editedTerms); // apply changes
+        setIsEditing(false);
+
+        Swal.fire({
+          icon: 'success',
+          title: 'Saved!',
+          text: 'Terms and conditions updated successfully.',
+          confirmButtonColor: '#22c55e',
+        });
+      }
+    });
   };
 
   return (
@@ -45,15 +89,13 @@ export default function TermsEditor() {
       <div className='mb-8'>
         <AdminProfile />
       </div>
-      
+
       <div className="relative w-full">
         <button 
           onClick={handleToggleEdit}
           className="absolute top-0 right-0 flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
         >
-          {isEditing ? (
-            'Cancel'
-          ) : (
+          {isEditing ? 'Cancel' : (
             <>
               <CiEdit className="text-xl" />
               <span>Edit</span>
@@ -65,8 +107,8 @@ export default function TermsEditor() {
       {isEditing ? (
         <textarea
           className="w-full min-h-[calc(100vh-180px)] p-4 text-lg font-medium border rounded-lg"
-          value={terms}
-          onChange={(e) => setTerms(e.target.value)}
+          value={editedTerms}
+          onChange={(e) => setEditedTerms(e.target.value)}
         />
       ) : (
         <div className="w-full min-h-[calc(100vh-180px)] p-4 text-lg font-medium space-y-6 font-poppins">
